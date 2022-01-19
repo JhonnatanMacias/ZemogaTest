@@ -10,6 +10,7 @@
 		20285A1B2797A08F00C28AF2 /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */; };
 		20285A1E2797A2D900C28AF2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */; };
 		20285A202797A37400C28AF2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1F2797A37400C28AF2 /* ReusableView.swift */; };
+		20285A222797A82000C28AF2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A212797A82000C28AF2 /* Bindable.swift */; };
 		2091CB442797215700E4AFB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB432797215700E4AFB1 /* AppDelegate.swift */; };
 		2091CB462797215700E4AFB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB452797215700E4AFB1 /* SceneDelegate.swift */; };
 		2091CB482797215700E4AFB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB472797215700E4AFB1 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintUtil.swift; sourceTree = "<group>"; };
 		20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		20285A1F2797A37400C28AF2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		20285A212797A82000C28AF2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		2091CB402797215700E4AFB1 /* ZemogaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZemogaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091CB432797215700E4AFB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2091CB452797215700E4AFB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +109,6 @@
 				34B4E30419FB40855E555A09 /* Pods-ZemogaTestTests.debug.xcconfig */,
 				5AEFC413ED6D536099E6CFDB /* Pods-ZemogaTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -146,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */,
+				20285A212797A82000C28AF2 /* Bindable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -421,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20285A1E2797A2D900C28AF2 /* UITableView+Extensions.swift in Sources */,
+				20285A222797A82000C28AF2 /* Bindable.swift in Sources */,
 				2091CB482797215700E4AFB1 /* ViewController.swift in Sources */,
 				2091CB442797215700E4AFB1 /* AppDelegate.swift in Sources */,
 				20285A202797A37400C28AF2 /* ReusableView.swift in Sources */,
