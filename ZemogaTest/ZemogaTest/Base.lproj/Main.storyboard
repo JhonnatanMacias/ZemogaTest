@@ -16,8 +16,37 @@
                     <view key="view" contentMode="scaleToFill" id="zpO-iB-o3x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWH-OB-eJx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rI7-mh-Luq">
+                                        <rect key="frame" x="41.5" y="7.5" width="331" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="vqE-1U-aco"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Favorites"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="rI7-mh-Luq" firstAttribute="width" secondItem="PWH-OB-eJx" secondAttribute="width" multiplier="0.8" id="Ntj-SC-CvE"/>
+                                    <constraint firstItem="rI7-mh-Luq" firstAttribute="centerX" secondItem="PWH-OB-eJx" secondAttribute="centerX" id="j1u-py-hoA"/>
+                                    <constraint firstItem="rI7-mh-Luq" firstAttribute="centerY" secondItem="PWH-OB-eJx" secondAttribute="centerY" id="qFN-yW-afo"/>
+                                    <constraint firstAttribute="height" constant="50" id="rwg-Ej-17I"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="pgN-KC-O1u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PWH-OB-eJx" firstAttribute="leading" secondItem="pgN-KC-O1u" secondAttribute="leading" id="Ioe-mc-DnN"/>
+                            <constraint firstItem="pgN-KC-O1u" firstAttribute="trailing" secondItem="PWH-OB-eJx" secondAttribute="trailing" id="fTN-i3-3Wi"/>
+                            <constraint firstItem="PWH-OB-eJx" firstAttribute="top" secondItem="pgN-KC-O1u" secondAttribute="top" id="yMq-yg-2yt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j3U-17-RO3">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="0Vs-m0-NMu">
@@ -27,6 +56,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="postSegmentedControl" destination="rI7-mh-Luq" id="wyA-FY-Mvb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFj-Fd-EeY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,6 +86,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

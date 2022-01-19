@@ -15,6 +15,10 @@ class PostViewController: UIViewController {
         static let pageTitle: String = "Post"
     }
     
+    // MARK: - Properties
+    
+    @IBOutlet weak var postSegmentedControl: UISegmentedControl!
+    
     // MARK: - Initializer
     
     override func viewDidLoad() {
@@ -23,8 +27,7 @@ class PostViewController: UIViewController {
         title = Constants.pageTitle
         
         setNeedsStatusBarAppearanceUpdate()
-        
-        // Do any additional setup after loading the view.
+        setupSegmentedControlStyle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +35,23 @@ class PostViewController: UIViewController {
        
     }
     
-
+    // MARK: - Private Functions
+    
+    private func setupSegmentedControlStyle() {
+        if #available(iOS 13.0, *) {
+           postSegmentedControl.selectedSegmentTintColor = UIColor.baseGreenColor()
+            postSegmentedControl.backgroundColor = UIColor.systemGray6.withAlphaComponent(0.5)
+        } else {
+            postSegmentedControl.tintColor = UIColor.baseGreenColor()
+        }
+       
+        postSegmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        postSegmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.baseGreenColor()], for: .normal)
+        postSegmentedControl.layer.borderWidth = 1.0
+        postSegmentedControl.layer.borderColor = UIColor.baseGreenColor().cgColor
+        postSegmentedControl.layer.masksToBounds = true
+    }
+    
     // MARK: - Internal Functions
     
     @IBAction func didTapRefreshButton(_ sender: Any) {
