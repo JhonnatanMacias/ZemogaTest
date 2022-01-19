@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20285A1B2797A08F00C28AF2 /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */; };
+		20285A1E2797A2D900C28AF2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */; };
+		20285A202797A37400C28AF2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1F2797A37400C28AF2 /* ReusableView.swift */; };
 		2091CB442797215700E4AFB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB432797215700E4AFB1 /* AppDelegate.swift */; };
 		2091CB462797215700E4AFB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB452797215700E4AFB1 /* SceneDelegate.swift */; };
 		2091CB482797215700E4AFB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB472797215700E4AFB1 /* ViewController.swift */; };
@@ -16,9 +19,9 @@
 		2091CB5B2797215C00E4AFB1 /* ZemogaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB5A2797215C00E4AFB1 /* ZemogaTestTests.swift */; };
 		2091CB652797215C00E4AFB1 /* ZemogaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB642797215C00E4AFB1 /* ZemogaTestUITests.swift */; };
 		2091CB672797215C00E4AFB1 /* ZemogaTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB662797215C00E4AFB1 /* ZemogaTestUITestsLaunchTests.swift */; };
-		2B6231AD3DD2033D377FA6E5 /* Pods_ZemogaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059AB2F681383301BB3A5003 /* Pods_ZemogaTest.framework */; };
-		2BE5E1B402E5DD95697C1E76 /* Pods_ZemogaTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB90D62D64C1823A2324E368 /* Pods_ZemogaTestTests.framework */; };
-		D8EEB96EA6DA47D1AA030BF1 /* Pods_ZemogaTest_ZemogaTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC5663333B2A1902BD7560C /* Pods_ZemogaTest_ZemogaTestUITests.framework */; };
+		742FD73031A499405EF5AC5B /* Pods_ZemogaTest_ZemogaTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5FAAAAED0664FBC49DEDA8 /* Pods_ZemogaTest_ZemogaTestUITests.framework */; };
+		AA1F0BF76F4E9D6F2F40CCE1 /* Pods_ZemogaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD819633538112AC603AB00 /* Pods_ZemogaTest.framework */; };
+		E5F41373EEAED95256687AE6 /* Pods_ZemogaTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3225FDEBC6E19E2E22A583ED /* Pods_ZemogaTestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		059AB2F681383301BB3A5003 /* Pods_ZemogaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05BFE458C2FD252BF5E32B11 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintUtil.swift; sourceTree = "<group>"; };
+		20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		20285A1F2797A37400C28AF2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		2091CB402797215700E4AFB1 /* ZemogaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZemogaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091CB432797215700E4AFB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2091CB452797215700E4AFB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,14 +59,14 @@
 		2091CB602797215C00E4AFB1 /* ZemogaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZemogaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091CB642797215C00E4AFB1 /* ZemogaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemogaTestUITests.swift; sourceTree = "<group>"; };
 		2091CB662797215C00E4AFB1 /* ZemogaTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemogaTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2FED5E8F2D9C7738DCB17C59 /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig"; path = "Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4FEC137BFE9B340CCA992EC8 /* Pods-ZemogaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTest.debug.xcconfig"; path = "Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest.debug.xcconfig"; sourceTree = "<group>"; };
-		86310F0F0B77579EE6CA0623 /* Pods-ZemogaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTest.release.xcconfig"; path = "Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest.release.xcconfig"; sourceTree = "<group>"; };
-		AAC5663333B2A1902BD7560C /* Pods_ZemogaTest_ZemogaTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTest_ZemogaTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAE29F0534C9EAE0688487D6 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		CB90D62D64C1823A2324E368 /* Pods_ZemogaTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E22318BE50E548D2802E0195 /* Pods-ZemogaTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTestTests.release.xcconfig"; path = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests.release.xcconfig"; sourceTree = "<group>"; };
-		F7FFB3A09A856F831E92EB96 /* Pods-ZemogaTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTestTests.debug.xcconfig"; path = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2FB8448B6731797856DD5254 /* Pods-ZemogaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTest.debug.xcconfig"; path = "Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest.debug.xcconfig"; sourceTree = "<group>"; };
+		3225FDEBC6E19E2E22A583ED /* Pods_ZemogaTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34B4E30419FB40855E555A09 /* Pods-ZemogaTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTestTests.debug.xcconfig"; path = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5AEFC413ED6D536099E6CFDB /* Pods-ZemogaTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTestTests.release.xcconfig"; path = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		616D9C42082B4C26185FB3A2 /* Pods-ZemogaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTest.release.xcconfig"; path = "Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest.release.xcconfig"; sourceTree = "<group>"; };
+		6858A9B385E4E4A895D4882A /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig"; path = "Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6B5FAAAAED0664FBC49DEDA8 /* Pods_ZemogaTest_ZemogaTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTest_ZemogaTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD819633538112AC603AB00 /* Pods_ZemogaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B6231AD3DD2033D377FA6E5 /* Pods_ZemogaTest.framework in Frameworks */,
+				AA1F0BF76F4E9D6F2F40CCE1 /* Pods_ZemogaTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BE5E1B402E5DD95697C1E76 /* Pods_ZemogaTestTests.framework in Frameworks */,
+				E5F41373EEAED95256687AE6 /* Pods_ZemogaTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,24 +90,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8EEB96EA6DA47D1AA030BF1 /* Pods_ZemogaTest_ZemogaTestUITests.framework in Frameworks */,
+				742FD73031A499405EF5AC5B /* Pods_ZemogaTest_ZemogaTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13F2AA2F891B0C0A3D787345 /* Pods */ = {
+		0B2664FA8E5D2A6DD6741551 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4FEC137BFE9B340CCA992EC8 /* Pods-ZemogaTest.debug.xcconfig */,
-				86310F0F0B77579EE6CA0623 /* Pods-ZemogaTest.release.xcconfig */,
-				CAE29F0534C9EAE0688487D6 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */,
-				2FED5E8F2D9C7738DCB17C59 /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */,
-				F7FFB3A09A856F831E92EB96 /* Pods-ZemogaTestTests.debug.xcconfig */,
-				E22318BE50E548D2802E0195 /* Pods-ZemogaTestTests.release.xcconfig */,
+				2FB8448B6731797856DD5254 /* Pods-ZemogaTest.debug.xcconfig */,
+				616D9C42082B4C26185FB3A2 /* Pods-ZemogaTest.release.xcconfig */,
+				05BFE458C2FD252BF5E32B11 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */,
+				6858A9B385E4E4A895D4882A /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */,
+				34B4E30419FB40855E555A09 /* Pods-ZemogaTestTests.debug.xcconfig */,
+				5AEFC413ED6D536099E6CFDB /* Pods-ZemogaTestTests.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		20285A162797A01100C28AF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		20285A172797A01E00C28AF2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		20285A182797A02800C28AF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		20285A192797A02F00C28AF2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				20285A1C2797A2C900C28AF2 /* Extensions */,
+				20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */,
+				20285A1F2797A37400C28AF2 /* ReusableView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		20285A1C2797A2C900C28AF2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2091CB372797215700E4AFB1 = {
@@ -111,8 +157,8 @@
 				2091CB592797215C00E4AFB1 /* ZemogaTestTests */,
 				2091CB632797215C00E4AFB1 /* ZemogaTestUITests */,
 				2091CB412797215700E4AFB1 /* Products */,
-				13F2AA2F891B0C0A3D787345 /* Pods */,
-				7AF402B84CAD469732AC0ED9 /* Frameworks */,
+				0B2664FA8E5D2A6DD6741551 /* Pods */,
+				523A1E9A189146BDF38D03AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +175,10 @@
 		2091CB422797215700E4AFB1 /* ZemogaTest */ = {
 			isa = PBXGroup;
 			children = (
+				20285A192797A02F00C28AF2 /* Utils */,
+				20285A182797A02800C28AF2 /* Models */,
+				20285A172797A01E00C28AF2 /* ViewModels */,
+				20285A162797A01100C28AF2 /* View */,
 				2091CB432797215700E4AFB1 /* AppDelegate.swift */,
 				2091CB452797215700E4AFB1 /* SceneDelegate.swift */,
 				2091CB472797215700E4AFB1 /* ViewController.swift */,
@@ -157,12 +207,12 @@
 			path = ZemogaTestUITests;
 			sourceTree = "<group>";
 		};
-		7AF402B84CAD469732AC0ED9 /* Frameworks */ = {
+		523A1E9A189146BDF38D03AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				059AB2F681383301BB3A5003 /* Pods_ZemogaTest.framework */,
-				AAC5663333B2A1902BD7560C /* Pods_ZemogaTest_ZemogaTestUITests.framework */,
-				CB90D62D64C1823A2324E368 /* Pods_ZemogaTestTests.framework */,
+				EDD819633538112AC603AB00 /* Pods_ZemogaTest.framework */,
+				6B5FAAAAED0664FBC49DEDA8 /* Pods_ZemogaTest_ZemogaTestUITests.framework */,
+				3225FDEBC6E19E2E22A583ED /* Pods_ZemogaTestTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,7 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2091CB6A2797215C00E4AFB1 /* Build configuration list for PBXNativeTarget "ZemogaTest" */;
 			buildPhases = (
-				2993BAB65B473F60CA63B50A /* [CP] Check Pods Manifest.lock */,
+				DAA8E2AC87E981606E7C5122 /* [CP] Check Pods Manifest.lock */,
 				2091CB3C2797215700E4AFB1 /* Sources */,
 				2091CB3D2797215700E4AFB1 /* Frameworks */,
 				2091CB3E2797215700E4AFB1 /* Resources */,
@@ -192,7 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2091CB6D2797215C00E4AFB1 /* Build configuration list for PBXNativeTarget "ZemogaTestTests" */;
 			buildPhases = (
-				C4B76D33BDC0AA78A57645FB /* [CP] Check Pods Manifest.lock */,
+				F8DE15182B46F04FF1093583 /* [CP] Check Pods Manifest.lock */,
 				2091CB522797215C00E4AFB1 /* Sources */,
 				2091CB532797215C00E4AFB1 /* Frameworks */,
 				2091CB542797215C00E4AFB1 /* Resources */,
@@ -211,7 +261,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2091CB702797215C00E4AFB1 /* Build configuration list for PBXNativeTarget "ZemogaTestUITests" */;
 			buildPhases = (
-				E914527FA2C284FA42BED9BC /* [CP] Check Pods Manifest.lock */,
+				C2C2D11978EA27472F31379B /* [CP] Check Pods Manifest.lock */,
 				2091CB5C2797215C00E4AFB1 /* Sources */,
 				2091CB5D2797215C00E4AFB1 /* Frameworks */,
 				2091CB5E2797215C00E4AFB1 /* Resources */,
@@ -297,51 +347,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2993BAB65B473F60CA63B50A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZemogaTest-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4B76D33BDC0AA78A57645FB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZemogaTestTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E914527FA2C284FA42BED9BC /* [CP] Check Pods Manifest.lock */ = {
+		C2C2D11978EA27472F31379B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,6 +369,50 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DAA8E2AC87E981606E7C5122 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZemogaTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8DE15182B46F04FF1093583 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZemogaTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -370,8 +420,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20285A1E2797A2D900C28AF2 /* UITableView+Extensions.swift in Sources */,
 				2091CB482797215700E4AFB1 /* ViewController.swift in Sources */,
 				2091CB442797215700E4AFB1 /* AppDelegate.swift in Sources */,
+				20285A202797A37400C28AF2 /* ReusableView.swift in Sources */,
+				20285A1B2797A08F00C28AF2 /* ConstraintUtil.swift in Sources */,
 				2091CB462797215700E4AFB1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,7 +599,7 @@
 		};
 		2091CB6B2797215C00E4AFB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FEC137BFE9B340CCA992EC8 /* Pods-ZemogaTest.debug.xcconfig */;
+			baseConfigurationReference = 2FB8448B6731797856DD5254 /* Pods-ZemogaTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -577,7 +630,7 @@
 		};
 		2091CB6C2797215C00E4AFB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86310F0F0B77579EE6CA0623 /* Pods-ZemogaTest.release.xcconfig */;
+			baseConfigurationReference = 616D9C42082B4C26185FB3A2 /* Pods-ZemogaTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -608,7 +661,7 @@
 		};
 		2091CB6E2797215C00E4AFB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7FFB3A09A856F831E92EB96 /* Pods-ZemogaTestTests.debug.xcconfig */;
+			baseConfigurationReference = 34B4E30419FB40855E555A09 /* Pods-ZemogaTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -629,7 +682,7 @@
 		};
 		2091CB6F2797215C00E4AFB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E22318BE50E548D2802E0195 /* Pods-ZemogaTestTests.release.xcconfig */;
+			baseConfigurationReference = 5AEFC413ED6D536099E6CFDB /* Pods-ZemogaTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -650,7 +703,7 @@
 		};
 		2091CB712797215C00E4AFB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAE29F0534C9EAE0688487D6 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */;
+			baseConfigurationReference = 05BFE458C2FD252BF5E32B11 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -669,7 +722,7 @@
 		};
 		2091CB722797215C00E4AFB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FED5E8F2D9C7738DCB17C59 /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */;
+			baseConfigurationReference = 6858A9B385E4E4A895D4882A /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
