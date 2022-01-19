@@ -11,6 +11,7 @@
 		20285A1E2797A2D900C28AF2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */; };
 		20285A202797A37400C28AF2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1F2797A37400C28AF2 /* ReusableView.swift */; };
 		20285A222797A82000C28AF2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A212797A82000C28AF2 /* Bindable.swift */; };
+		20285A242797AD7500C28AF2 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A232797AD7500C28AF2 /* PostViewController.swift */; };
 		2091CB442797215700E4AFB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB432797215700E4AFB1 /* AppDelegate.swift */; };
 		2091CB462797215700E4AFB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB452797215700E4AFB1 /* SceneDelegate.swift */; };
 		2091CB482797215700E4AFB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB472797215700E4AFB1 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		2091CB5B2797215C00E4AFB1 /* ZemogaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB5A2797215C00E4AFB1 /* ZemogaTestTests.swift */; };
 		2091CB652797215C00E4AFB1 /* ZemogaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB642797215C00E4AFB1 /* ZemogaTestUITests.swift */; };
 		2091CB672797215C00E4AFB1 /* ZemogaTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB662797215C00E4AFB1 /* ZemogaTestUITestsLaunchTests.swift */; };
+		20BA60A72797C03A003406E3 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BA60A62797C039003406E3 /* MainNavigationViewController.swift */; };
 		742FD73031A499405EF5AC5B /* Pods_ZemogaTest_ZemogaTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5FAAAAED0664FBC49DEDA8 /* Pods_ZemogaTest_ZemogaTestUITests.framework */; };
 		AA1F0BF76F4E9D6F2F40CCE1 /* Pods_ZemogaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD819633538112AC603AB00 /* Pods_ZemogaTest.framework */; };
 		E5F41373EEAED95256687AE6 /* Pods_ZemogaTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3225FDEBC6E19E2E22A583ED /* Pods_ZemogaTestTests.framework */; };
@@ -48,6 +50,7 @@
 		20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		20285A1F2797A37400C28AF2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		20285A212797A82000C28AF2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		20285A232797AD7500C28AF2 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		2091CB402797215700E4AFB1 /* ZemogaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZemogaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091CB432797215700E4AFB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2091CB452797215700E4AFB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		2091CB602797215C00E4AFB1 /* ZemogaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZemogaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091CB642797215C00E4AFB1 /* ZemogaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemogaTestUITests.swift; sourceTree = "<group>"; };
 		2091CB662797215C00E4AFB1 /* ZemogaTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZemogaTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		20BA60A62797C039003406E3 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		2FB8448B6731797856DD5254 /* Pods-ZemogaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTest.debug.xcconfig"; path = "Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest.debug.xcconfig"; sourceTree = "<group>"; };
 		3225FDEBC6E19E2E22A583ED /* Pods_ZemogaTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZemogaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B4E30419FB40855E555A09 /* Pods-ZemogaTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTestTests.debug.xcconfig"; path = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +119,9 @@
 		20285A162797A01100C28AF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2091CB472797215700E4AFB1 /* ViewController.swift */,
+				20285A232797AD7500C28AF2 /* PostViewController.swift */,
+				20BA60A62797C039003406E3 /* MainNavigationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,7 +190,6 @@
 				20285A162797A01100C28AF2 /* View */,
 				2091CB432797215700E4AFB1 /* AppDelegate.swift */,
 				2091CB452797215700E4AFB1 /* SceneDelegate.swift */,
-				2091CB472797215700E4AFB1 /* ViewController.swift */,
 				2091CB492797215700E4AFB1 /* Main.storyboard */,
 				2091CB4C2797215B00E4AFB1 /* Assets.xcassets */,
 				2091CB4E2797215B00E4AFB1 /* LaunchScreen.storyboard */,
@@ -422,6 +428,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20285A242797AD7500C28AF2 /* PostViewController.swift in Sources */,
+				20BA60A72797C03A003406E3 /* MainNavigationViewController.swift in Sources */,
 				20285A1E2797A2D900C28AF2 /* UITableView+Extensions.swift in Sources */,
 				20285A222797A82000C28AF2 /* Bindable.swift in Sources */,
 				2091CB482797215700E4AFB1 /* ViewController.swift in Sources */,
