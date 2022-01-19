@@ -17,7 +17,8 @@ class PostViewController: UIViewController {
     
     // MARK: - Properties
     
-    @IBOutlet weak var postSegmentedControl: UISegmentedControl!
+    @IBOutlet private var postSegmentedControl: UISegmentedControl!
+    @IBOutlet private var tableView: UITableView!
     
     // MARK: - Initializer
     
@@ -58,8 +59,16 @@ class PostViewController: UIViewController {
         
     }
     
+    @IBAction func didTapDeleteAllButton(_ sender: Any) {
+    }
+    
+    @IBAction func handleSegmentChange(_ sender: Any) {
+   
+    }
+    
     /*
-    // MARK: - Navigation
+    
+     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
