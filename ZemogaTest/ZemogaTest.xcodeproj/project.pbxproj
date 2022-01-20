@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		200F559C2798C89800895813 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F559B2798C89800895813 /* UIColor+Extension.swift */; };
+		200F559E2798E21400895813 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F559D2798E21400895813 /* PostsTableViewCell.swift */; };
+		200F55A02798FFD000895813 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F559F2798FFD000895813 /* PostViewController.swift */; };
+		200F55A2279907E300895813 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55A1279907E300895813 /* UIView+Extension.swift */; };
+		200F55A42799141B00895813 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55A32799141B00895813 /* UserInfoView.swift */; };
+		200F55A62799197800895813 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55A52799197800895813 /* PostTableViewCell.swift */; };
 		20285A1B2797A08F00C28AF2 /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */; };
 		20285A1E2797A2D900C28AF2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */; };
 		20285A202797A37400C28AF2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1F2797A37400C28AF2 /* ReusableView.swift */; };
 		20285A222797A82000C28AF2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A212797A82000C28AF2 /* Bindable.swift */; };
-		20285A242797AD7500C28AF2 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A232797AD7500C28AF2 /* PostViewController.swift */; };
+		20285A242797AD7500C28AF2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A232797AD7500C28AF2 /* PostsViewController.swift */; };
 		2091CB442797215700E4AFB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB432797215700E4AFB1 /* AppDelegate.swift */; };
 		2091CB462797215700E4AFB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB452797215700E4AFB1 /* SceneDelegate.swift */; };
 		2091CB482797215700E4AFB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB472797215700E4AFB1 /* ViewController.swift */; };
@@ -48,11 +53,16 @@
 /* Begin PBXFileReference section */
 		05BFE458C2FD252BF5E32B11 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		200F559B2798C89800895813 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		200F559D2798E21400895813 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		200F559F2798FFD000895813 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		200F55A1279907E300895813 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		200F55A32799141B00895813 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		200F55A52799197800895813 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintUtil.swift; sourceTree = "<group>"; };
 		20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		20285A1F2797A37400C28AF2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		20285A212797A82000C28AF2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
-		20285A232797AD7500C28AF2 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		20285A232797AD7500C28AF2 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		2091CB402797215700E4AFB1 /* ZemogaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZemogaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091CB432797215700E4AFB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2091CB452797215700E4AFB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,8 +132,12 @@
 			isa = PBXGroup;
 			children = (
 				2091CB472797215700E4AFB1 /* ViewController.swift */,
-				20285A232797AD7500C28AF2 /* PostViewController.swift */,
+				20285A232797AD7500C28AF2 /* PostsViewController.swift */,
 				20BA60A62797C039003406E3 /* MainNavigationViewController.swift */,
+				200F559D2798E21400895813 /* PostsTableViewCell.swift */,
+				200F559F2798FFD000895813 /* PostViewController.swift */,
+				200F55A32799141B00895813 /* UserInfoView.swift */,
+				200F55A52799197800895813 /* PostTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +172,7 @@
 				20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */,
 				20285A212797A82000C28AF2 /* Bindable.swift */,
 				200F559B2798C89800895813 /* UIColor+Extension.swift */,
+				200F55A1279907E300895813 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -431,7 +446,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20285A242797AD7500C28AF2 /* PostViewController.swift in Sources */,
+				200F55A02798FFD000895813 /* PostViewController.swift in Sources */,
+				200F55A42799141B00895813 /* UserInfoView.swift in Sources */,
+				200F55A62799197800895813 /* PostTableViewCell.swift in Sources */,
+				200F559E2798E21400895813 /* PostsTableViewCell.swift in Sources */,
+				20285A242797AD7500C28AF2 /* PostsViewController.swift in Sources */,
 				20BA60A72797C03A003406E3 /* MainNavigationViewController.swift in Sources */,
 				20285A1E2797A2D900C28AF2 /* UITableView+Extensions.swift in Sources */,
 				20285A222797A82000C28AF2 /* Bindable.swift in Sources */,
@@ -441,6 +460,7 @@
 				20285A1B2797A08F00C28AF2 /* ConstraintUtil.swift in Sources */,
 				2091CB462797215700E4AFB1 /* SceneDelegate.swift in Sources */,
 				200F559C2798C89800895813 /* UIColor+Extension.swift in Sources */,
+				200F55A2279907E300895813 /* UIView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
