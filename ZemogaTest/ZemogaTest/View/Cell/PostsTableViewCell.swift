@@ -12,7 +12,7 @@ class PostsTableViewCell: UITableViewCell {
     // MARK: - Constants
     
     private enum Constants {
-        static let titleTopMargin: CGFloat = 4
+        static let titleTopMargin: CGFloat = 10
         static let titleLeftMargin: CGFloat = 30
         static let titleRightMargin: CGFloat = 50
         static let readIconHeight: CGFloat = 16
@@ -50,7 +50,7 @@ class PostsTableViewCell: UITableViewCell {
     
     private var titleLabel: UILabel = {
         let label = UILabel.newAutolayoutLabel()
-        label.numberOfLines = 3
+        label.numberOfLines = 5
         label.font = UIFont.systemFont(ofSize: 14)
         label.textAlignment = .left
         return label
@@ -62,6 +62,20 @@ class PostsTableViewCell: UITableViewCell {
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
+    
+    var viewModel: PostCellViewModelProtocol! {
+        didSet {
+            
+            viewModel.message.bindAndFire { [weak self] message in
+                guard let self = self else {
+                    return
+                }
+                
+                self.titleLabel.text = message
+                self.titleLabel.sizeToFit()
+            }
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -106,7 +120,7 @@ class PostsTableViewCell: UITableViewCell {
         contentView.addSubview(titleLabel)
         NSLayoutConstraint.activate([ConstraintUtil.pinRightOfView(titleLabel,
                                                                    toRightOfView: containerView, withMargin:
-                                                                    Constants.titleRightMargin),
+                                                                    -Constants.titleRightMargin),
                                      ConstraintUtil.pinTopOfView(titleLabel, toTopOfView: containerView,
                                                                  withMargin: Constants.titleTopMargin),
                                      ConstraintUtil.pinBottomOfView(titleLabel, toBottomOfView: containerView, withMargin: -Constants.titleTopMargin),
