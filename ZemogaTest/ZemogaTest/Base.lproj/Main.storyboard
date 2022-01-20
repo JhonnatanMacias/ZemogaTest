@@ -1,24 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Av8-ib-2Ia">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Posts View Controller-->
+        <scene sceneID="qdY-xc-kot">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="IE2-7G-VqF" customClass="PostsViewController" customModule="ZemogaTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zpO-iB-o3x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWH-OB-eJx" userLabel="segmentedContainer">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rI7-mh-Luq">
+                                        <rect key="frame" x="41.5" y="7.5" width="331" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="vqE-1U-aco"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Favorites"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="handleSegmentChange:" destination="IE2-7G-VqF" eventType="valueChanged" id="XNq-l2-KP3"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="rI7-mh-Luq" firstAttribute="width" secondItem="PWH-OB-eJx" secondAttribute="width" multiplier="0.8" id="Ntj-SC-CvE"/>
+                                    <constraint firstItem="rI7-mh-Luq" firstAttribute="centerX" secondItem="PWH-OB-eJx" secondAttribute="centerX" id="j1u-py-hoA"/>
+                                    <constraint firstItem="rI7-mh-Luq" firstAttribute="centerY" secondItem="PWH-OB-eJx" secondAttribute="centerY" id="qFN-yW-afo"/>
+                                    <constraint firstAttribute="height" constant="50" id="rwg-Ej-17I"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aXr-wl-OBO">
+                                <rect key="frame" x="0.0" y="138" width="414" height="661"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa6-Y8-a0O">
+                                <rect key="frame" x="0.0" y="807" width="414" height="45"/>
+                                <color key="backgroundColor" red="0.74265081232244323" green="0.13554243607954544" blue="0.14161809295943031" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="G4A-ha-M2S"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete All">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapDeleteAllButton:" destination="IE2-7G-VqF" eventType="touchUpInside" id="yfC-b3-GpV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pgN-KC-O1u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aXr-wl-OBO" firstAttribute="leading" secondItem="pgN-KC-O1u" secondAttribute="leading" id="Djr-ZG-NbQ"/>
+                            <constraint firstItem="aXr-wl-OBO" firstAttribute="top" secondItem="PWH-OB-eJx" secondAttribute="bottom" id="EB5-Ta-vQp"/>
+                            <constraint firstItem="fa6-Y8-a0O" firstAttribute="top" secondItem="aXr-wl-OBO" secondAttribute="bottom" constant="8" id="IVI-1n-ahQ"/>
+                            <constraint firstItem="PWH-OB-eJx" firstAttribute="leading" secondItem="pgN-KC-O1u" secondAttribute="leading" id="Ioe-mc-DnN"/>
+                            <constraint firstItem="pgN-KC-O1u" firstAttribute="trailing" secondItem="aXr-wl-OBO" secondAttribute="trailing" id="QA9-VI-yR5"/>
+                            <constraint firstItem="pgN-KC-O1u" firstAttribute="trailing" secondItem="fa6-Y8-a0O" secondAttribute="trailing" id="ciK-xU-3h5"/>
+                            <constraint firstItem="pgN-KC-O1u" firstAttribute="trailing" secondItem="PWH-OB-eJx" secondAttribute="trailing" id="fTN-i3-3Wi"/>
+                            <constraint firstItem="fa6-Y8-a0O" firstAttribute="leading" secondItem="pgN-KC-O1u" secondAttribute="leading" id="nAi-6u-XOw"/>
+                            <constraint firstItem="PWH-OB-eJx" firstAttribute="top" secondItem="pgN-KC-O1u" secondAttribute="top" id="yMq-yg-2yt"/>
+                            <constraint firstItem="pgN-KC-O1u" firstAttribute="bottom" secondItem="fa6-Y8-a0O" secondAttribute="bottom" constant="10" id="zBx-7e-G4W"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="j3U-17-RO3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="0Vs-m0-NMu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapRefreshButton:" destination="IE2-7G-VqF" id="bDg-tY-ye5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="postSegmentedControl" destination="rI7-mh-Luq" id="wyA-FY-Mvb"/>
+                        <outlet property="tableView" destination="aXr-wl-OBO" id="2r8-cN-YjQ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFj-Fd-EeY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1955.072463768116" y="57.589285714285708"/>
+        </scene>
+        <!--Main Navigation View Controller-->
+        <scene sceneID="pIu-9u-ekP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Av8-ib-2Ia" customClass="MainNavigationViewController" customModule="ZemogaTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L8k-wb-MSW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IE2-7G-VqF" kind="relationship" relationship="rootViewController" id="aRr-8B-HD9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5zx-SX-cVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="57.589285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
