@@ -60,8 +60,10 @@ class PostsViewController: UIViewController {
     
     private func setupTableView() {
         tableView.register(PostsTableViewCell.self, forCellReuseIdentifier: Constants.postCellIdentifier)
+        tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.backgroundColor = .systemGray6
     }
     
     private func setupSegmentedControlStyle() {
@@ -101,7 +103,6 @@ extension PostsViewController: UITableViewDataSource {
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PostsTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-//        cell.delegate = self
         cell.viewModel = viewModel.cellsViewModel.value[indexPath.row]
         return cell
         }
@@ -110,18 +111,7 @@ extension PostsViewController: UITableViewDataSource {
 extension PostsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cellType = viewModel.filterCells.value[indexPath.row]
-//        switch cellType {
-//            case .title:
-//                break
-//            default:
-//                UIView.animate(withDuration: 0.5) {
-//                    self.tableView.performBatchUpdates(nil)
-//                    if let cell = self.tableView.cellForRow(at: indexPath) as? CustomFilterTableViewCell {
-//                        cell.displayOrHideDivider(selected: true)
-//                    }
-//                }
-//        }
+
     }
     
 }

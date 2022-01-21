@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="50"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rI7-mh-Luq">
-                                        <rect key="frame" x="41.5" y="7.5" width="331" height="36"/>
+                                        <rect key="frame" x="20.5" y="7.5" width="373" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="vqE-1U-aco"/>
                                         </constraints>
@@ -36,7 +36,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstItem="rI7-mh-Luq" firstAttribute="width" secondItem="PWH-OB-eJx" secondAttribute="width" multiplier="0.8" id="Ntj-SC-CvE"/>
+                                    <constraint firstItem="rI7-mh-Luq" firstAttribute="width" secondItem="PWH-OB-eJx" secondAttribute="width" multiplier="0.9" id="Ntj-SC-CvE"/>
                                     <constraint firstItem="rI7-mh-Luq" firstAttribute="centerX" secondItem="PWH-OB-eJx" secondAttribute="centerX" id="j1u-py-hoA"/>
                                     <constraint firstItem="rI7-mh-Luq" firstAttribute="centerY" secondItem="PWH-OB-eJx" secondAttribute="centerY" id="qFN-yW-afo"/>
                                     <constraint firstAttribute="height" constant="50" id="rwg-Ej-17I"/>
@@ -52,11 +52,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="G4A-ha-M2S"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Delete All">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Delete All"/>
                                 <connections>
                                     <action selector="didTapDeleteAllButton:" destination="IE2-7G-VqF" eventType="touchUpInside" id="yfC-b3-GpV"/>
                                 </connections>
