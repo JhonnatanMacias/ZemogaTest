@@ -42,7 +42,7 @@ class PostsTableViewCell: UITableViewCell {
     private let starImageBtn: UIButton = {
         let iconBtn = UIButton()
         iconBtn.setImage(UIImage(systemName: "star")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        iconBtn.setImage(UIImage(systemName: "star.fill")?.withTintColor(.yellow, renderingMode: .alwaysOriginal), for: .selected)
+        iconBtn.setImage(UIImage(systemName: "star.fill")?.withTintColor(UIColor.favoriteButtonColor(), renderingMode: .alwaysOriginal), for: .selected)
         iconBtn.translatesAutoresizingMaskIntoConstraints = false
         iconBtn.isHidden = true
         return iconBtn
@@ -51,8 +51,9 @@ class PostsTableViewCell: UITableViewCell {
     private var titleLabel: UILabel = {
         let label = UILabel.newAutolayoutLabel()
         label.numberOfLines = 5
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 15)
         label.textAlignment = .left
+        label.textColor = UIColor.mainGrayDarkFontColor()
         return label
     }()
     
@@ -83,14 +84,16 @@ class PostsTableViewCell: UITableViewCell {
                 self.readIConView.isHidden = isRead
             }
             
-            viewModel.star.bindAndFire { [weak self] isStarted in
+            viewModel.star.bindAndFire { [weak self] isFavorited in
                 guard let self = self else {
                     return
                 }
                 
-                self.starImageBtn.isHidden = !isStarted
-                self.starImageBtn.isSelected = isStarted
-                self.readIConView.isHidden = true
+                self.starImageBtn.isHidden = !isFavorited
+                self.starImageBtn.isSelected = isFavorited
+                if isFavorited {
+                    self.readIConView.isHidden = true
+                }
             }
         }
     }

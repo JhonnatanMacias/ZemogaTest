@@ -35,7 +35,7 @@ class UserInfoView: UIView {
     
     private var userLabel: UILabel = {
         let label = UILabel.newAutolayoutLabel()
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textAlignment = .left
         label.text = Constants.userTitle
         return label

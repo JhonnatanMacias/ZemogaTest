@@ -14,7 +14,7 @@ class PostViewController: UIViewController {
     private enum Constants {
         static let title: String = "Description"
         static let userTitle: String = "User"
-        static let commentsTitle: String = "Comments"
+        static let commentsTitle: String = "COMMENTS"
         static let pageTitle: String = "Post"
         
         static let titleLeftMargin: CGFloat = 10
@@ -31,7 +31,7 @@ class PostViewController: UIViewController {
     
     private var titleLabel: UILabel = {
         let label = UILabel.newAutolayoutLabel()
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textAlignment = .left
         label.text = Constants.title
         return label
@@ -56,7 +56,7 @@ class PostViewController: UIViewController {
     private var commentLabel: UILabel = {
         let label = UILabel.newAutolayoutLabel()
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textAlignment = .justified
         label.textColor = .black
         label.text = Constants.commentsTitle
@@ -74,7 +74,7 @@ class PostViewController: UIViewController {
     private let favoriteBtn: UIButton = {
         let iconBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         iconBtn.setImage(UIImage(systemName: "star")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        iconBtn.setImage(UIImage(systemName: "star.fill")?.withTintColor(.yellow, renderingMode: .alwaysOriginal), for: .selected)
+        iconBtn.setImage(UIImage(systemName: "star.fill")?.withTintColor(UIColor.favoriteButtonColor(), renderingMode: .alwaysOriginal), for: .selected)
         return iconBtn
     }()
     
