@@ -90,6 +90,7 @@ class PostsTableViewCell: UITableViewCell {
                 
                 self.starImageBtn.isHidden = !isStarted
                 self.starImageBtn.isSelected = isStarted
+                self.readIConView.isHidden = true
             }
         }
     }

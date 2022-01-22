@@ -58,6 +58,13 @@ class PostsViewController: UIViewController {
        
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        hideNavigationBarBackBtnTitle()
+    }
+    
+    
+    
     // MARK: - Private Functions
     
     private func setupViews() {
@@ -88,6 +95,11 @@ class PostsViewController: UIViewController {
         postSegmentedControl.layer.borderColor = UIColor.baseGreenColor().cgColor
         postSegmentedControl.layer.masksToBounds = true
     }
+
+    private func hideNavigationBarBackBtnTitle() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
     
     // MARK: - Internal Functions
     

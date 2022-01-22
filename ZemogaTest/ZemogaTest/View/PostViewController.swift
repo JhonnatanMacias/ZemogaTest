@@ -15,12 +15,14 @@ class PostViewController: UIViewController {
         static let title: String = "Description"
         static let userTitle: String = "User"
         static let commentsTitle: String = "Comments"
+        static let pageTitle: String = "Post"
         
         static let titleLeftMargin: CGFloat = 10
         static let titleTopMargin: CGFloat = 12
         static let descriptionTopMargin: CGFloat = 4
         static let userInfoViewHeight: CGFloat = 130
         static let titleLabelHeight: CGFloat = 21
+        static let headerHeight: CGFloat = 25
         
         static let postCellIdentifier: String = PostTableViewCell.reuseIdentifier
     }
@@ -69,6 +71,13 @@ class PostViewController: UIViewController {
         return tableView
     }()
     
+    private let favoriteBtn: UIButton = {
+        let iconBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        iconBtn.setImage(UIImage(systemName: "star")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
+        iconBtn.setImage(UIImage(systemName: "star.fill")?.withTintColor(.yellow, renderingMode: .alwaysOriginal), for: .selected)
+        return iconBtn
+    }()
+    
     var viewModel: PostDetailViewModelProtocol! {
         didSet {
             
@@ -91,9 +100,23 @@ class PostViewController: UIViewController {
         setupView()
     }
     
-    func setupView() {
+    private func setupPageStyle() {
+        self.title = Constants.pageTitle
         view.backgroundColor = .systemGray6
         edgesForExtendedLayout = []
+        addRightBarButtonITem()
+        self.navigationController?.navigationBar.tintColor = .white
+    }
+    
+    private func addRightBarButtonITem() {
+        let rightBarBtn = UIBarButtonItem()
+        rightBarBtn.customView = favoriteBtn
+        favoriteBtn.addTarget(self, action: #selector(didTapFavoriteBtn), for: UIControl.Event.touchUpInside)
+        self.navigationItem.rightBarButtonItem = rightBarBtn
+    }
+    
+    func setupView() {
+        setupPageStyle()
         
         view.addSubview(titleLabel)
         NSLayoutConstraint.activate([ConstraintUtil.pinLeftOfView(titleLabel,
@@ -148,6 +171,10 @@ class PostViewController: UIViewController {
     func updateUserInfo(userInfo: User) {
         userInfoView.updateInfo(user: userInfo)
     }
+    
+    @objc func didTapFavoriteBtn() {
+        favoriteBtn.isSelected = !favoriteBtn.isSelected
+    }
 
 }
 
@@ -173,13 +200,16 @@ extension PostViewController: UITableViewDataSource {
 extension PostViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let returnedView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 25))
+        let returnedView = UIView(frame: CGRect(x: 0,
+                                                y: 0,
+                                                width: view.frame.size.width,
+                                                height: Constants.headerHeight))
         returnedView.backgroundColor = .lightGray
 
         returnedView.addSubview(commentLabel)
         NSLayoutConstraint.activate([ConstraintUtil.centerViewVertically(commentLabel, inContainingView: returnedView),
-                                     ConstraintUtil.setHeight(21, toView: commentLabel),
-                                     ConstraintUtil.pinLeftOfView(commentLabel, toLeftOfView: returnedView)
+                                     ConstraintUtil.setHeight(Constants.titleLabelHeight, toView: commentLabel),
+                                     ConstraintUtil.pinLeftOfView(commentLabel, toLeftOfView: returnedView, withMargin: Constants.titleLeftMargin)
         ])
 
         return returnedView
