@@ -22,16 +22,22 @@ class PostsViewController: UIViewController {
     @IBOutlet private var postSegmentedControl: UISegmentedControl!
     @IBOutlet private var tableView: UITableView!
     
-    var viewModel: PostsViewModelProtocol! {
+    var viewModel: PostsViewModelProtocol? {
         didSet {
             loadViewIfNeeded()
             
-            viewModel.postModel.bindAndFire { [weak self] _ in
+            viewModel?.postModel.bindAndFire { [weak self] _ in
                 guard let self = self else {
                       return
                 }
                 
                 self.tableView.reloadData()
+            }
+            
+            viewModel?.navigateToPostDetail = {  [weak self] detail in
+                let postDetailVC = PostViewController()
+                postDetailVC.viewModel = PostDetailViewModel(model: detail)
+                self?.navigationController?.pushViewController(postDetailVC, animated: true)
             }
         }
     }
@@ -43,11 +49,7 @@ class PostsViewController: UIViewController {
         super.viewDidLoad()
         
         title = Constants.pageTitle
-        
-        setNeedsStatusBarAppearanceUpdate()
-        setupSegmentedControlStyle()
-        setupTableView()
-        
+        setupViews()
         viewModel = PostsViewModel(model: FakePostModel().model)
     }
     
@@ -57,6 +59,12 @@ class PostsViewController: UIViewController {
     }
     
     // MARK: - Private Functions
+    
+    private func setupViews() {
+        setNeedsStatusBarAppearanceUpdate()
+        setupSegmentedControlStyle()
+        setupTableView()
+    }
     
     private func setupTableView() {
         tableView.register(PostsTableViewCell.self, forCellReuseIdentifier: Constants.postCellIdentifier)
@@ -98,10 +106,18 @@ class PostsViewController: UIViewController {
 extension PostsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let viewModel = viewModel else {
+            return 0
+        }
+        
         return viewModel.cellsViewModel.value.count
     }
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let viewModel = viewModel else {
+            return UITableViewCell()
+        }
+        
         let cell: PostsTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         cell.viewModel = viewModel.cellsViewModel.value[indexPath.row]
         return cell
@@ -111,7 +127,9 @@ extension PostsViewController: UITableViewDataSource {
 extension PostsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        if let viewModel = viewModel {
+            viewModel.postSelected(postDetail: viewModel.postModel.value[indexPath.row].postDetail)
+        }
     }
     
 }

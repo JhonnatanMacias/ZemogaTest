@@ -83,7 +83,6 @@ class PostsTableViewCell: UITableViewCell {
                 self.readIConView.isHidden = isRead
             }
             
-            
             viewModel.star.bindAndFire { [weak self] isStarted in
                 guard let self = self else {
                     return
