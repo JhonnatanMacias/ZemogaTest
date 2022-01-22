@@ -11,7 +11,7 @@ protocol PostDetailViewModelProtocol: AnyObject {
     
     // MARK: - Properties
 
-    var postModel: Bindable<PostDetail> { get }
+    var postModel: Bindable<PostDetail> { get set }
     var cellsViewModel: Bindable<[CommentCellViewModel]> { get }
     
     // MARK: - Events

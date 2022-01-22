@@ -66,7 +66,6 @@ class PostsTableViewCell: UITableViewCell {
     
     var viewModel: PostCellViewModelProtocol! {
         didSet {
-            
             viewModel.message.bindAndFire { [weak self] message in
                 guard let self = self else {
                     return
@@ -76,16 +75,30 @@ class PostsTableViewCell: UITableViewCell {
                 self.titleLabel.sizeToFit()
             }
             
+            viewModel.read.bindAndFire { [weak self] isRead in
+                guard let self = self else {
+                    return
+                }
+                
+                self.readIConView.isHidden = isRead
+            }
+            
             viewModel.postDetail.bindAndFire { [weak self] detail in
                 guard let self = self else {
                     return
                 }
                 
-                if detail.isFavorited {
-                    self.starImageBtn.isHidden = false
-                    self.starImageBtn.isSelected = true
-                } else {
-                    self.readIConView.isHidden = false
+                self.starImageBtn.isHidden = !detail.isFavorited
+                self.starImageBtn.isSelected = detail.isFavorited
+            }
+            
+            viewModel.postDetailViewModel.bindAndFire { [weak self] postDetailViewModel in
+                guard let self = self else {
+                    return
+                }
+                
+                if postDetailViewModel.postModel.value.isFavorited {
+                    self.viewModel.postDetail.value.isFavorited = true
                 }
             }
         }
@@ -99,10 +112,13 @@ class PostsTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        if selected {
+            viewModel.read.value = true
+            print("setSelected")
+        }
+       
     }
     
-
     // MARK: - Initializer
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

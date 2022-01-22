@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol PostViewControllerDelegate: AnyObject {
+    func detailViewDidUpdate(post: PostDetailViewModel)
+}
+
 class PostViewController: UIViewController {
     
     // MARK: - Constants
@@ -78,6 +82,8 @@ class PostViewController: UIViewController {
         return iconBtn
     }()
     
+    weak var delegate: PostViewControllerDelegate?
+    
     var viewModel: PostDetailViewModelProtocol! {
         didSet {
             
@@ -88,6 +94,7 @@ class PostViewController: UIViewController {
                 
                 self.descriptionLabel.text = postDetail.description
                 self.updateUserInfo(userInfo: postDetail.user)
+                self.markLikeFavoriteIfIsNeeded(postDetail: postDetail)
                 self.tableView.reloadData()
             }
         }
@@ -98,6 +105,12 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+        
+        delegate?.detailViewDidUpdate(post: viewModel as! PostDetailViewModel)
     }
     
     private func setupPageStyle() {
@@ -114,6 +127,12 @@ class PostViewController: UIViewController {
         favoriteBtn.addTarget(self, action: #selector(didTapFavoriteBtn), for: UIControl.Event.touchUpInside)
         self.navigationItem.rightBarButtonItem = rightBarBtn
     }
+    
+    private func markLikeFavoriteIfIsNeeded(postDetail: PostDetail) {
+        favoriteBtn.isSelected = postDetail.isFavorited
+    }
+    
+    // MARK: - Internal Functions
     
     func setupView() {
         setupPageStyle()
@@ -174,6 +193,13 @@ class PostViewController: UIViewController {
     
     @objc func didTapFavoriteBtn() {
         favoriteBtn.isSelected = !favoriteBtn.isSelected
+        let postDetail = viewModel.postModel.value
+        postDetail.isFavorited = favoriteBtn.isSelected
+        viewModel.postModel.value = postDetail
+        viewModel.postModel = Bindable(postDetail)
+        
+        NotificationCenter.default.post(name: Notification.Name("NotificationIdentifier"), object: nil)
+        
     }
 
 }

@@ -12,27 +12,36 @@ protocol PostsViewModelProtocol: AnyObject {
     // MARK: - Properties
 
     var postModel: Bindable<[Post]> { get }
-    var cellsViewModel: Bindable<[PostCellViewModel]> { get }
+    var cellsViewModel: Bindable<[PostCellViewModel]> { get set }
     
-    func postSelected(postDetail: PostDetail)
+    func postSelected(postViewModel: PostDetailViewModel)
     
     // MARK: - Events
 
-    var navigateToPostDetail: ((PostDetail) -> ())? { get set}
+    var navigateToPostDetail: ((PostDetailViewModel) -> ())? { get set}
+    
+    var navigateToPostDetails: ((PostDetail) -> ())? { get set}
 }
 
 class PostsViewModel: PostsViewModelProtocol {
     
-    var navigateToPostDetail: ((PostDetail) -> ())?
+    // actualizar Modelo
+    
+    var navigateToPostDetail: ((PostDetailViewModel) -> ())?
+    var navigateToPostDetails: ((PostDetail) -> ())?
     var postModel: Bindable<[Post]> = Bindable([])
     var cellsViewModel: Bindable<[PostCellViewModel]> = Bindable([])
-   
+    
+    func postSelected(postViewModel: PostDetailViewModel) {
+        navigateToPostDetail?(postViewModel)
+    }
+    
     func postSelected(postDetail: PostDetail) {
-        navigateToPostDetail?(postDetail)
+        navigateToPostDetails?(postDetail)
     }
     
     init(model: [Post]) {
         postModel.value = model
-        cellsViewModel.value = model.compactMap { PostCellViewModel(model: $0) }
+        cellsViewModel.value = model.compactMap { PostCellViewModel(model: $0, postDetailViewModel: PostDetailViewModel(model: $0.postDetail)) }
     }
 }

@@ -34,9 +34,9 @@ class PostsViewController: UIViewController {
                 self.tableView.reloadData()
             }
             
-            viewModel?.navigateToPostDetail = {  [weak self] detail in
+            viewModel?.navigateToPostDetail = {  [weak self] viewModel in
                 let postDetailVC = PostViewController()
-                postDetailVC.viewModel = PostDetailViewModel(model: detail)
+                postDetailVC.viewModel = viewModel
                 self?.navigationController?.pushViewController(postDetailVC, animated: true)
             }
         }
@@ -51,19 +51,18 @@ class PostsViewController: UIViewController {
         title = Constants.pageTitle
         setupViews()
         viewModel = PostsViewModel(model: FakePostModel().model)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("NotificationIdentifier"), object: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-       
+    @objc func methodOfReceivedNotification(notification: Notification) {
+        tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         hideNavigationBarBackBtnTitle()
     }
-    
-    
     
     // MARK: - Private Functions
     
@@ -140,8 +139,10 @@ extension PostsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let viewModel = viewModel {
-            viewModel.postSelected(postDetail: viewModel.postModel.value[indexPath.row].postDetail)
+            
+            viewModel.postSelected(postViewModel: viewModel.cellsViewModel.value[indexPath.row].postDetailViewModel.value)
         }
     }
     
 }
+

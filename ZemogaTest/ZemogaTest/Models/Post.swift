@@ -9,12 +9,16 @@ import Foundation
 
 class Post {
     
+    var read: Bool = false
+    var star: Bool = false
     var message: String = ""
     var postDetail: PostDetail = PostDetail()
     
     // MARK: - Initializers
 
-    init(message: String, postDetail: PostDetail) {
+    init(read: Bool, star: Bool, message: String, postDetail: PostDetail) {
+        self.read = read
+        self.star = star
         self.message = message
         self.postDetail = postDetail
     }
