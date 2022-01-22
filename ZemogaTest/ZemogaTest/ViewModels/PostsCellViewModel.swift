@@ -10,8 +10,6 @@ import Foundation
 protocol PostCellViewModelProtocol: AnyObject {
     
     var cellModel: Bindable<Post> { get }
-    var read: Bindable<Bool> { get }
-    var star: Bindable<Bool> { get }
     var message: Bindable<String> { get }
     var postDetail: Bindable<PostDetail> { get }
 }
@@ -19,15 +17,11 @@ protocol PostCellViewModelProtocol: AnyObject {
 class PostCellViewModel: PostCellViewModelProtocol {
     
     var cellModel: Bindable<Post> = Bindable(Post())
-    var read: Bindable<Bool> = Bindable(false)
-    var star: Bindable<Bool> = Bindable(false)
     var message: Bindable<String> = Bindable("")
     var postDetail: Bindable<PostDetail> = Bindable(PostDetail())
    
     init(model: Post) {
         cellModel.value = model
-        read.value = model.read
-        star.value = model.star
         message.value = model.message
         postDetail.value = model.postDetail
     }

@@ -12,13 +12,15 @@ class PostDetail {
     var description: String = ""
     var user: User!
     var comments: [String] = []
+    var isFavorited: Bool = false
     
     // MARK: - Initializers
 
-    init(description: String, user: User, comments: [String]) {
+    init(description: String, user: User, isFavorite: Bool, comments: [String]) {
         self.description = description
         self.user = user
         self.comments = comments
+        self.isFavorited = isFavorite
     }
     
     init() {

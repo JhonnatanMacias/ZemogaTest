@@ -76,23 +76,16 @@ class PostsTableViewCell: UITableViewCell {
                 self.titleLabel.sizeToFit()
             }
             
-            viewModel.read.bindAndFire { [weak self] isRead in
+            viewModel.postDetail.bindAndFire { [weak self] detail in
                 guard let self = self else {
                     return
                 }
                 
-                self.readIConView.isHidden = isRead
-            }
-            
-            viewModel.star.bindAndFire { [weak self] isFavorited in
-                guard let self = self else {
-                    return
-                }
-                
-                self.starImageBtn.isHidden = !isFavorited
-                self.starImageBtn.isSelected = isFavorited
-                if isFavorited {
-                    self.readIConView.isHidden = true
+                if detail.isFavorited {
+                    self.starImageBtn.isHidden = false
+                    self.starImageBtn.isSelected = true
+                } else {
+                    self.readIConView.isHidden = false
                 }
             }
         }
