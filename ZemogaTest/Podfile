@@ -8,6 +8,7 @@ target 'ZemogaTest' do
   # Pods for ZemogaTest
   
   pod 'Alamofire', '~> 5.5'
+  pod 'RealmSwift'
 
   target 'ZemogaTestTests' do
     inherit! :search_paths

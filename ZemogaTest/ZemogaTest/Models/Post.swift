@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Post: Codable  {
+class Post: Object, Codable  {
     
-    var id: Int = 0
-    var read: Bool = false
-    var message: String = ""
-    var postDetail: PostDetail = PostDetail()
+    @objc dynamic var id: Int = 0
+    @objc dynamic var read: Bool = false
+    @objc dynamic var message: String = ""
+    @objc dynamic var postDetail: PostDetail! = PostDetail()
     
     enum CodingKeys: String, CodingKey {
         case id, read, message
@@ -27,7 +28,7 @@ class Post: Codable  {
         self.postDetail = postDetail
     }
     
-    init() {}
+    override init() {}
     
 }
 

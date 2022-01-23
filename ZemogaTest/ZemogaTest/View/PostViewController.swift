@@ -92,7 +92,7 @@ class PostViewController: UIViewController {
                     return
                 }
                 
-                self.descriptionLabel.text = postDetail.description
+                self.descriptionLabel.text = postDetail.postDescription
                 self.updateUserInfo(userInfo: postDetail.user)
                 self.markLikeFavoriteIfIsNeeded(postDetail: postDetail)
                 self.tableView.reloadData()

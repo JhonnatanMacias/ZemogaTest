@@ -18,7 +18,7 @@ class FakePostModel {
         for index in 1...5 {
             model.append(Post(read: false,
                               message: "\(index) \(message)",
-                              postDetail: PostDetail(description: detail,
+                              postDetail: PostDetail(postDescription: detail,
                                                      user: User(name: "Jhonnatan",
                                                                 email: "Jhonnatan@mail.com",
                                                                 phone: "321456786",
@@ -33,7 +33,7 @@ class FakePostModel {
         
         model.append(Post(read: true,
                           message: "6 \(message2)",
-                          postDetail: PostDetail(description: detail,
+                          postDetail: PostDetail(postDescription: detail,
                                                  user: User(name: "Jhonnatan",
                                                             email: "Jhonnatan@mail.com",
                                                             phone: "321456786",
