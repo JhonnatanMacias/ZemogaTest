@@ -7,18 +7,22 @@
 
 import Foundation
 
-class Post {
+class Post: Codable  {
     
+    var id: Int = 0
     var read: Bool = false
-    var star: Bool = false
     var message: String = ""
     var postDetail: PostDetail = PostDetail()
     
+    enum CodingKeys: String, CodingKey {
+        case id, read, message
+        case postDetail = "PostDetail"
+    }
+    
     // MARK: - Initializers
 
-    init(read: Bool, star: Bool, message: String, postDetail: PostDetail) {
+    init(read: Bool, message: String, postDetail: PostDetail) {
         self.read = read
-        self.star = star
         self.message = message
         self.postDetail = postDetail
     }
@@ -26,3 +30,35 @@ class Post {
     init() {}
     
 }
+
+// MARK: - PostElement
+//class PostElement: Codable {
+//    let id: Int
+//    var read: Bool = false
+//    var message: String = ""
+//    let postDetail: PostDetail
+//
+//    enum CodingKeys: String, CodingKey {
+//        case id, read, message
+//        case postDetail = "PostDetail"
+//    }
+//}
+
+// MARK: - PostDetail
+//class PostDetail: Codable {
+//    var title: String = ""
+//    var isFavorited: Bool = false
+//    var comments: [String] = []
+//    var user: Users
+//}
+
+// MARK: - User
+//class Users: Codable {
+//    var name: String
+//    var email: String
+//    var phone: String
+//    var webSite: String
+//}
+
+//typealias Post = [PostElement]
+

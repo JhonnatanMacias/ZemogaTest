@@ -31,13 +31,30 @@ class PostsViewController: UIViewController {
                       return
                 }
                 
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+               
             }
             
+            viewModel?.cellsViewModel.bindAndFire(listener: { [weak self] _ in
+                guard let self = self else {
+                      return
+                }
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            })
+            
             viewModel?.navigateToPostDetail = {  [weak self] viewModel in
+                guard let self = self else {
+                      return
+                }
+                
                 let postDetailVC = PostViewController()
                 postDetailVC.viewModel = viewModel
-                self?.navigationController?.pushViewController(postDetailVC, animated: true)
+                self.navigationController?.pushViewController(postDetailVC, animated: true)
             }
         }
     }
@@ -50,9 +67,11 @@ class PostsViewController: UIViewController {
         
         title = Constants.pageTitle
         setupViews()
-        viewModel = PostsViewModel(model: FakePostModel().model)
+        viewModel = PostsViewModel() // model: FakePostModel().model
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("NotificationIdentifier"), object: nil)
+        
+        viewModel?.getPosts()
     }
     
     @objc func methodOfReceivedNotification(notification: Notification) {
@@ -109,8 +128,12 @@ class PostsViewController: UIViewController {
     @IBAction func didTapDeleteAllButton(_ sender: Any) {
     }
     
-    @IBAction func handleSegmentChange(_ sender: Any) {
-   
+    @IBAction func handleSegmentAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            viewModel?.displayFavoritiesPost(onlyFavorites: false)
+        } else {
+            viewModel?.displayFavoritiesPost(onlyFavorites: true)
+        }
     }
 }
 
@@ -139,7 +162,7 @@ extension PostsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let viewModel = viewModel {
-            
+            viewModel.postModel.value[indexPath.row].read = true
             viewModel.postSelected(postViewModel: viewModel.cellsViewModel.value[indexPath.row].postDetailViewModel.value)
         }
     }

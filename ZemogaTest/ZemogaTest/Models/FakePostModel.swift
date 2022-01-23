@@ -17,7 +17,6 @@ class FakePostModel {
     init() {
         for index in 1...5 {
             model.append(Post(read: false,
-                              star: false,
                               message: "\(index) \(message)",
                               postDetail: PostDetail(description: detail,
                                                      user: User(name: "Jhonnatan",
@@ -33,7 +32,6 @@ class FakePostModel {
         let message2 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, here are many variations of passages of Lorem Ipsum available,"
         
         model.append(Post(read: true,
-                          star: true,
                           message: "6 \(message2)",
                           postDetail: PostDetail(description: detail,
                                                  user: User(name: "Jhonnatan",

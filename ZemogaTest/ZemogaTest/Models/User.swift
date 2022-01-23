@@ -7,7 +7,7 @@
 
 import Foundation
 
-class User {
+class User: Codable {
     
     var name: String = ""
     var phone: String = ""
@@ -22,4 +22,6 @@ class User {
         self.phone = phone
         self.webSite = webSite
     }
+    
+    init() {}
 }

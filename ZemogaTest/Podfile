@@ -6,6 +6,8 @@ target 'ZemogaTest' do
   use_frameworks!
 
   # Pods for ZemogaTest
+  
+  pod 'Alamofire', '~> 5.5'
 
   target 'ZemogaTestTests' do
     inherit! :search_paths

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PostDetail {
+class PostDetail: Codable {
     
     var description: String = ""
     var user: User!
@@ -23,7 +23,12 @@ class PostDetail {
         self.isFavorited = isFavorite
     }
     
-    init() {
-        
-    }
+    init() {}
 }
+
+//class PostDetail: Codable {
+//    var title: String = ""
+//    var isFavorited: Bool = false
+//    var comments: [String] = []
+//    var user: Users
+//}

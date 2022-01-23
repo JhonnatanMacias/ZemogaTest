@@ -7,6 +7,10 @@
 
 import UIKit
 
+//protocol PostsTableViewCell: AnyObject {
+////    func se
+//}
+
 class PostsTableViewCell: UITableViewCell {
     
     // MARK: - Constants
@@ -114,9 +118,7 @@ class PostsTableViewCell: UITableViewCell {
 
         if selected {
             viewModel.read.value = true
-            print("setSelected")
         }
-       
     }
     
     // MARK: - Initializer

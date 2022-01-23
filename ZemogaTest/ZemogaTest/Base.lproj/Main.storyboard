@@ -30,7 +30,7 @@
                                             <segment title="Favorites"/>
                                         </segments>
                                         <connections>
-                                            <action selector="handleSegmentChange:" destination="IE2-7G-VqF" eventType="valueChanged" id="XNq-l2-KP3"/>
+                                            <action selector="handleSegmentAction:" destination="IE2-7G-VqF" eventType="valueChanged" id="xXL-Kd-Soa"/>
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
