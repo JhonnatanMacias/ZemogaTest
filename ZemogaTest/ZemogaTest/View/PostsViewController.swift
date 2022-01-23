@@ -122,10 +122,11 @@ class PostsViewController: UIViewController {
     // MARK: - Internal Functions
     
     @IBAction func didTapRefreshButton(_ sender: Any) {
-        
+        viewModel?.getPosts()
     }
     
     @IBAction func didTapDeleteAllButton(_ sender: Any) {
+        viewModel?.deleteAllPost()
     }
     
     @IBAction func handleSegmentAction(_ sender: UISegmentedControl) {
