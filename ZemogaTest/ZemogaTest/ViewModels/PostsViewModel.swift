@@ -20,6 +20,7 @@ protocol PostsViewModelProtocol: AnyObject {
     func displayFavoritiesPost(onlyFavorites: Bool)
     
     func getPosts()
+    func removePost(index: Int)
     
     // MARK: - Events
 
@@ -78,6 +79,11 @@ class PostsViewModel: PostsViewModelProtocol {
                 print(error)
             }
         }
+    }
+    
+    func removePost(index: Int) {
+        self.postModel.value.remove(at: index)
+        self.cellsViewModel.value = postModel.value.compactMap { PostCellViewModel(model: $0, postDetailViewModel: PostDetailViewModel(model: $0.postDetail)) }
     }
     
     private func setupModel(model: [Post]) {
