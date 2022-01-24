@@ -7,18 +7,22 @@
 
 import UIKit
 
+//protocol PostsTableViewCell: AnyObject {
+////    func se
+//}
+
 class PostsTableViewCell: UITableViewCell {
     
     // MARK: - Constants
     
     private enum Constants {
         static let titleTopMargin: CGFloat = 10
-        static let titleLeftMargin: CGFloat = 30
+        static let titleLeftMargin: CGFloat = 40
         static let titleRightMargin: CGFloat = 50
-        static let readIconHeight: CGFloat = 16
-        static let readIconLeftMargin: CGFloat = 10
-        static let starIconSize: CGFloat = 14
-        static let starIconLeftMargin: CGFloat = 7
+        static let readIconHeight: CGFloat = 14
+        static let readIconLeftMargin: CGFloat = 12
+        static let starIconSize: CGFloat = 22
+        static let starIconLeftMargin: CGFloat = 10
     }
     
     // MARK: - Properties
@@ -32,17 +36,17 @@ class PostsTableViewCell: UITableViewCell {
     
     private var readIConView: UIView = {
         let container = UIView()
-        container.backgroundColor = .white
+        container.backgroundColor = .blue
         container.translatesAutoresizingMaskIntoConstraints = false
-        container.layer.masksToBounds = true
-        container.layer.cornerRadius = 8
+        container.layer.cornerRadius = 7
+        container.isHidden = true
         return container
     }()
     
     private let starImageBtn: UIButton = {
         let iconBtn = UIButton()
         iconBtn.setImage(UIImage(systemName: "star")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
-        iconBtn.setImage(UIImage(systemName: "star.fill")?.withTintColor(.yellow, renderingMode: .alwaysOriginal), for: .selected)
+        iconBtn.setImage(UIImage(systemName: "star.fill")?.withTintColor(UIColor.favoriteButtonColor(), renderingMode: .alwaysOriginal), for: .selected)
         iconBtn.translatesAutoresizingMaskIntoConstraints = false
         iconBtn.isHidden = true
         return iconBtn
@@ -51,8 +55,9 @@ class PostsTableViewCell: UITableViewCell {
     private var titleLabel: UILabel = {
         let label = UILabel.newAutolayoutLabel()
         label.numberOfLines = 5
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 15)
         label.textAlignment = .left
+        label.textColor = UIColor.mainGrayDarkFontColor()
         return label
     }()
     
@@ -65,7 +70,6 @@ class PostsTableViewCell: UITableViewCell {
     
     var viewModel: PostCellViewModelProtocol! {
         didSet {
-            
             viewModel.message.bindAndFire { [weak self] message in
                 guard let self = self else {
                     return
@@ -73,6 +77,33 @@ class PostsTableViewCell: UITableViewCell {
                 
                 self.titleLabel.text = message
                 self.titleLabel.sizeToFit()
+            }
+            
+            viewModel.read.bindAndFire { [weak self] isRead in
+                guard let self = self else {
+                    return
+                }
+                
+                self.readIConView.isHidden = isRead
+            }
+            
+            viewModel.postDetail.bindAndFire { [weak self] detail in
+                guard let self = self else {
+                    return
+                }
+                
+                self.starImageBtn.isHidden = !detail.isFavorited
+                self.starImageBtn.isSelected = detail.isFavorited
+            }
+            
+            viewModel.postDetailViewModel.bindAndFire { [weak self] postDetailViewModel in
+                guard let self = self else {
+                    return
+                }
+                
+                if postDetailViewModel.postModel.value.isFavorited {
+                    self.viewModel.postDetail.value.isFavorited = true
+                }
             }
         }
     }
@@ -85,10 +116,11 @@ class PostsTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        if selected {
+            viewModel.read.value = true
+        }
     }
     
-
     // MARK: - Initializer
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -104,6 +136,9 @@ class PostsTableViewCell: UITableViewCell {
     // MARK: - Private function
     
     private func commonInit() {
+        
+        self.accessoryType = .disclosureIndicator
+        self.selectionStyle = .none
         
         contentView.addSubview(containerView)
         NSLayoutConstraint.activate(ConstraintUtil.pinAllSides(of: containerView, to: contentView))
@@ -130,7 +165,8 @@ class PostsTableViewCell: UITableViewCell {
         contentView.addSubview(readIConView)
         NSLayoutConstraint.activate([ConstraintUtil.centerViewVertically(readIConView, inContainingView: containerView),
                                      ConstraintUtil.setHeight(Constants.readIconHeight, toView: readIConView),
-                                     ConstraintUtil.pinLeftOfView(readIConView, toLeftOfView: containerView, withMargin: Constants.readIconLeftMargin)
+                                     ConstraintUtil.pinLeftOfView(readIConView, toLeftOfView: containerView, withMargin: Constants.readIconLeftMargin),
+                                     ConstraintUtil.setWidth(readIConView, constant: Constants.readIconHeight)
         ])
         
         contentView.addSubview(starImageBtn)

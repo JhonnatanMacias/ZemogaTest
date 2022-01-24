@@ -7,21 +7,23 @@
 
 import Foundation
 
-class PostDetail {
+class PostDetail: Codable {
     
-    var description: String = ""
+    var id: Int = 0
+    var postDescription: String = ""
     var user: User!
     var comments: [String] = []
+    var isFavorited: Bool = false
     
     // MARK: - Initializers
 
-    init(description: String, user: User, comments: [String]) {
-        self.description = description
+    init(postDescription: String, user: User, isFavorite: Bool, comments: [String], id: Int) {
+        self.postDescription = postDescription
         self.user = user
         self.comments = comments
+        self.isFavorited = isFavorite
+        self.id = id
     }
     
-    init() {
-        
-    }
+    init() {}
 }

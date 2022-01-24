@@ -6,6 +6,7 @@
 //
 
 import Foundation
+@testable import ZemogaTest
 
 class FakePostModel {
     
@@ -17,31 +18,32 @@ class FakePostModel {
     init() {
         for index in 1...5 {
             model.append(Post(read: false,
-                              star: false,
                               message: "\(index) \(message)",
-                              postDetail: PostDetail(description: detail,
+                              postDetail: PostDetail(postDescription: detail,
                                                      user: User(name: "Jhonnatan",
                                                                 email: "Jhonnatan@mail.com",
                                                                 phone: "321456786",
                                                                 webSite: "jhonnatan.com"),
+                                                     isFavorite: false,
                                                      comments: ["What is Lorem Ipsum?",
                                                                 "Where does it come from?",
-                                                                "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"])))
+                                                                "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"],
+                                                     id: 1)))
         }
         
         let message2 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, here are many variations of passages of Lorem Ipsum available,"
         
-        model.append(Post(read: false,
-                          star: false,
+        model.append(Post(read: true,
                           message: "6 \(message2)",
-                          postDetail: PostDetail(description: detail,
+                          postDetail: PostDetail(postDescription: detail,
                                                  user: User(name: "Jhonnatan",
                                                             email: "Jhonnatan@mail.com",
                                                             phone: "321456786",
-                                                            webSite: "jhonnatan.com"),
+                                                            webSite: "jhonnatan.com"), isFavorite: true,
                                                  comments: ["What is Lorem Ipsum?",
                                                             "Where does it come from?",
-                                                            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"])))
+                                                            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"],
+                                                 id: 1)))
        
     }
     

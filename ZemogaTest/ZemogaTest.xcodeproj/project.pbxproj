@@ -18,12 +18,20 @@
 		200F55AC2799A5D600895813 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55AB2799A5D600895813 /* User.swift */; };
 		200F55AE2799A90800895813 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55AD2799A90800895813 /* PostsViewModel.swift */; };
 		200F55B02799AA2800895813 /* PostsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55AF2799AA2800895813 /* PostsCellViewModel.swift */; };
-		200F55B22799B52000895813 /* FakePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55B12799B51F00895813 /* FakePostModel.swift */; };
+		200F55B5279B62F900895813 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55B4279B62F900895813 /* PostDetailViewModel.swift */; };
+		200F55B9279B655400895813 /* CommentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55B8279B655400895813 /* CommentCellViewModel.swift */; };
+		20202981279E691400BE8CB7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20202980279E691400BE8CB7 /* LoadingViewController.swift */; };
+		20202987279E72F600BE8CB7 /* FakePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55B12799B51F00895813 /* FakePostModel.swift */; };
+		20202989279E78CF00BE8CB7 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20202988279E78CF00BE8CB7 /* MockDataService.swift */; };
 		20285A1B2797A08F00C28AF2 /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */; };
 		20285A1E2797A2D900C28AF2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */; };
 		20285A202797A37400C28AF2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1F2797A37400C28AF2 /* ReusableView.swift */; };
 		20285A222797A82000C28AF2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A212797A82000C28AF2 /* Bindable.swift */; };
 		20285A242797AD7500C28AF2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A232797AD7500C28AF2 /* PostsViewController.swift */; };
+		205471FD279CDA4600F195E8 /* PostsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205471FC279CDA4600F195E8 /* PostsServices.swift */; };
+		205471FF279CE31100F195E8 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205471FE279CE31100F195E8 /* BaseService.swift */; };
+		20547202279DFB1100F195E8 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20547201279DFB1100F195E8 /* DatabaseManager.swift */; };
+		20547204279E0D0700F195E8 /* PostRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20547203279E0D0700F195E8 /* PostRealm.swift */; };
 		2091CB442797215700E4AFB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB432797215700E4AFB1 /* AppDelegate.swift */; };
 		2091CB462797215700E4AFB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB452797215700E4AFB1 /* SceneDelegate.swift */; };
 		2091CB482797215700E4AFB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB472797215700E4AFB1 /* ViewController.swift */; };
@@ -70,11 +78,19 @@
 		200F55AD2799A90800895813 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		200F55AF2799AA2800895813 /* PostsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCellViewModel.swift; sourceTree = "<group>"; };
 		200F55B12799B51F00895813 /* FakePostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePostModel.swift; sourceTree = "<group>"; };
+		200F55B4279B62F900895813 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		200F55B8279B655400895813 /* CommentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellViewModel.swift; sourceTree = "<group>"; };
+		20202980279E691400BE8CB7 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		20202988279E78CF00BE8CB7 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
 		20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintUtil.swift; sourceTree = "<group>"; };
 		20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		20285A1F2797A37400C28AF2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		20285A212797A82000C28AF2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		20285A232797AD7500C28AF2 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		205471FC279CDA4600F195E8 /* PostsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsServices.swift; sourceTree = "<group>"; };
+		205471FE279CE31100F195E8 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		20547201279DFB1100F195E8 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		20547203279E0D0700F195E8 /* PostRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRealm.swift; sourceTree = "<group>"; };
 		2091CB402797215700E4AFB1 /* ZemogaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZemogaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091CB432797215700E4AFB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2091CB452797215700E4AFB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +165,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		20202984279E729100BE8CB7 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				200F55B12799B51F00895813 /* FakePostModel.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
 		20285A162797A01100C28AF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +191,8 @@
 			children = (
 				200F55AD2799A90800895813 /* PostsViewModel.swift */,
 				200F55AF2799AA2800895813 /* PostsCellViewModel.swift */,
+				200F55B4279B62F900895813 /* PostDetailViewModel.swift */,
+				200F55B8279B655400895813 /* CommentCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -177,7 +203,7 @@
 				200F55A72799A51200895813 /* Post.swift */,
 				200F55A92799A58200895813 /* PostDetail.swift */,
 				200F55AB2799A5D600895813 /* User.swift */,
-				200F55B12799B51F00895813 /* FakePostModel.swift */,
+				20547203279E0D0700F195E8 /* PostRealm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +214,7 @@
 				20285A1C2797A2C900C28AF2 /* Extensions */,
 				20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */,
 				20285A1F2797A37400C28AF2 /* ReusableView.swift */,
+				20202980279E691400BE8CB7 /* LoadingViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -201,6 +228,23 @@
 				200F55A1279907E300895813 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		205471FB279CDA3200F195E8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				205471FC279CDA4600F195E8 /* PostsServices.swift */,
+				205471FE279CE31100F195E8 /* BaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		20547200279DFAC800F195E8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				20547201279DFB1100F195E8 /* DatabaseManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		2091CB372797215700E4AFB1 = {
@@ -228,6 +272,8 @@
 		2091CB422797215700E4AFB1 /* ZemogaTest */ = {
 			isa = PBXGroup;
 			children = (
+				20547200279DFAC800F195E8 /* Managers */,
+				205471FB279CDA3200F195E8 /* Services */,
 				20285A192797A02F00C28AF2 /* Utils */,
 				20285A182797A02800C28AF2 /* Models */,
 				20285A172797A01E00C28AF2 /* ViewModels */,
@@ -245,7 +291,9 @@
 		2091CB592797215C00E4AFB1 /* ZemogaTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				20202984279E729100BE8CB7 /* Posts */,
 				2091CB5A2797215C00E4AFB1 /* ZemogaTestTests.swift */,
+				20202988279E78CF00BE8CB7 /* MockDataService.swift */,
 			);
 			path = ZemogaTestTests;
 			sourceTree = "<group>";
@@ -280,6 +328,7 @@
 				2091CB3C2797215700E4AFB1 /* Sources */,
 				2091CB3D2797215700E4AFB1 /* Frameworks */,
 				2091CB3E2797215700E4AFB1 /* Resources */,
+				C34BD47E510B809F475625F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,6 +366,7 @@
 				2091CB5C2797215C00E4AFB1 /* Sources */,
 				2091CB5D2797215C00E4AFB1 /* Frameworks */,
 				2091CB5E2797215C00E4AFB1 /* Resources */,
+				151CAD2209393FF1D1C637AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,6 +449,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		151CAD2209393FF1D1C637AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C2C2D11978EA27472F31379B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +486,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C34BD47E510B809F475625F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DAA8E2AC87E981606E7C5122 /* [CP] Check Pods Manifest.lock */ = {
@@ -474,9 +558,13 @@
 			files = (
 				200F55B02799AA2800895813 /* PostsCellViewModel.swift in Sources */,
 				200F55A02798FFD000895813 /* PostViewController.swift in Sources */,
+				20547202279DFB1100F195E8 /* DatabaseManager.swift in Sources */,
 				200F55A42799141B00895813 /* UserInfoView.swift in Sources */,
 				200F55A62799197800895813 /* PostTableViewCell.swift in Sources */,
 				200F559E2798E21400895813 /* PostsTableViewCell.swift in Sources */,
+				200F55B5279B62F900895813 /* PostDetailViewModel.swift in Sources */,
+				20202981279E691400BE8CB7 /* LoadingViewController.swift in Sources */,
+				200F55B9279B655400895813 /* CommentCellViewModel.swift in Sources */,
 				20285A242797AD7500C28AF2 /* PostsViewController.swift in Sources */,
 				20BA60A72797C03A003406E3 /* MainNavigationViewController.swift in Sources */,
 				20285A1E2797A2D900C28AF2 /* UITableView+Extensions.swift in Sources */,
@@ -487,11 +575,13 @@
 				20285A202797A37400C28AF2 /* ReusableView.swift in Sources */,
 				200F55A82799A51200895813 /* Post.swift in Sources */,
 				20285A1B2797A08F00C28AF2 /* ConstraintUtil.swift in Sources */,
-				200F55B22799B52000895813 /* FakePostModel.swift in Sources */,
 				200F55AE2799A90800895813 /* PostsViewModel.swift in Sources */,
+				205471FD279CDA4600F195E8 /* PostsServices.swift in Sources */,
 				200F55AC2799A5D600895813 /* User.swift in Sources */,
 				2091CB462797215700E4AFB1 /* SceneDelegate.swift in Sources */,
 				200F559C2798C89800895813 /* UIColor+Extension.swift in Sources */,
+				20547204279E0D0700F195E8 /* PostRealm.swift in Sources */,
+				205471FF279CE31100F195E8 /* BaseService.swift in Sources */,
 				200F55A2279907E300895813 /* UIView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +590,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20202989279E78CF00BE8CB7 /* MockDataService.swift in Sources */,
+				20202987279E72F600BE8CB7 /* FakePostModel.swift in Sources */,
 				2091CB5B2797215C00E4AFB1 /* ZemogaTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,7 +691,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -654,7 +746,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -736,7 +828,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7FQ27H36VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mail.ZemogaTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -744,6 +836,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZemogaTest.app/ZemogaTest";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Debug;
 		};
@@ -757,7 +850,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7FQ27H36VW;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mail.ZemogaTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -765,6 +858,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZemogaTest.app/ZemogaTest";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Release;
 		};

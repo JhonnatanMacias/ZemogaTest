@@ -12,7 +12,7 @@ class PostTableViewCell: UITableViewCell {
     // MARK: - Constants
     
     private enum Constants {
-        static let titleTopMargin: CGFloat = 4
+        static let titleTopMargin: CGFloat = 10
         static let titleLeftMargin: CGFloat = 10
         static let titleRightMargin: CGFloat = 10
     }
@@ -33,6 +33,19 @@ class PostTableViewCell: UITableViewCell {
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
+    
+    var viewModel: CommentCellViewModelProtocol! {
+        didSet {
+            viewModel.comment.bindAndFire { [weak self] comment in
+                guard let self = self else {
+                    return
+                }
+                
+                self.titleLabel.text = comment
+                self.titleLabel.sizeToFit()
+            }
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,6 +74,8 @@ class PostTableViewCell: UITableViewCell {
     // MARK: - Private function
     
     private func commonInit() {
+        self.backgroundColor = .clear
+        self.selectionStyle = .none
         
         contentView.addSubview(dividerView)
         NSLayoutConstraint.activate([ConstraintUtil.pinRightOfView(dividerView,

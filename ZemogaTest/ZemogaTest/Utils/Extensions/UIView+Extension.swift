@@ -27,7 +27,7 @@ extension UIView {
         stackView.axis = .vertical
         stackView.alignment = .leading
         stackView.distribution = .fill
-        stackView.spacing = 4
+        stackView.spacing = 8
         return stackView
     }
     
@@ -38,7 +38,7 @@ extension UIView {
         tableView.separatorStyle = .none
         tableView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = UITableView.automaticDimension // valor CGFloat
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         return tableView
     }

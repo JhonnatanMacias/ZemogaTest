@@ -35,7 +35,7 @@ class UserInfoView: UIView {
     
     private var userLabel: UILabel = {
         let label = UILabel.newAutolayoutLabel()
-        label.font = UIFont.systemFont(ofSize: 12)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textAlignment = .left
         label.text = Constants.userTitle
         return label
@@ -43,7 +43,7 @@ class UserInfoView: UIView {
     
     private var nameLabel: UILabel = {
         let label = UILabel.newAutolayoutLabel()
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: 12)
         label.textAlignment = .left
         label.numberOfLines = 1
         return label
@@ -125,9 +125,21 @@ class UserInfoView: UIView {
         stackView.addArrangedSubview(emailLabel)
         stackView.addArrangedSubview(phoneLabel)
         stackView.addArrangedSubview(webSiteLabel)
-        
-//        let resultTitle = String(format: Constants.resultTitle, "1")/
 
+    }
+    
+    func updateInfo(user: User) {
+        nameLabel.text = String(format: Constants.nameTitle, ": \(user.name)")
+        nameLabel.sizeToFit()
+        
+        emailLabel.text = String(format: Constants.emailTitle, ": \(user.email)")
+        emailLabel.sizeToFit()
+        
+        phoneLabel.text = String(format: Constants.phoneTitle, ": \(user.phone)")
+        phoneLabel.sizeToFit()
+        
+        webSiteLabel.text = String(format: Constants.webSiteTitle, ": \(user.webSite)")
+        webSiteLabel.sizeToFit()
     }
     
 }
