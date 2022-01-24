@@ -31,10 +31,6 @@ Abrir el proyecto con Xcode y ejecutarlo.
 
 ### Funcionamiento 🔧
 
-```
-Al iniciar el proyecto, se traen todos los post del servicio,
-Se almacenan y se muestran en pantalla.
-```
 _Los datos vienen del servicio https://my-json-server.typicode.com/ y posteriormente son almacenados usando Realm_
 
 ```
@@ -43,16 +39,17 @@ Se almacenan y se muestran en pantalla.
 
 Al deslizar hacía la derecha se pueden borrar post, lo cual lo borrara de la memoria
 y de la base de datos local(cache). también se puede abrir el post en detalle seleccionando
-el post y marcar como favorito.
+el post y marcandolo como favorito.
 
 Al volver hacia la lista de posts, el indicador azul ya no sera mostrado para este post y un
-icon de estralla se mostrará en su lugar.
+icono de estralla se mostrará en su lugar.
+
 Si cerramos la aplicacion y la abrimos nuevamente, el post eliminado ya no se mostrará, porque 
 se cargan los post almacenados en cache, y se mostrará el icono de estrella para los post marcados
-como favoritos, igualmente no mostrará el indicador de leido si es necesario.
+como favoritos, igualmente no mostrará el indicador de leido para los post ya abiertos.
  
  Al presionar el boton de "Delete All" se borraran todos los post, para mostrarlos nuevamente
- se puede presionar el boton de refresh para traer los post nuevamente.
+ se puede presionar el boton de refresh para traer los post nuevamente del servicio.
 
  El botón de refresh siempre traerá los cambios del servicio y reemplazará los post almacenados
  en cache y sus cambios.
