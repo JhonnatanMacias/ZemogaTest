@@ -56,7 +56,7 @@ class PostsViewModel: PostsViewModelProtocol {
         navigateToPostDetails?(postDetail)
     }
     
-    let repository = PostsServices()
+    var repository = PostsServices()
     
     init() { }
     

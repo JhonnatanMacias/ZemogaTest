@@ -18,10 +18,11 @@
 		200F55AC2799A5D600895813 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55AB2799A5D600895813 /* User.swift */; };
 		200F55AE2799A90800895813 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55AD2799A90800895813 /* PostsViewModel.swift */; };
 		200F55B02799AA2800895813 /* PostsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55AF2799AA2800895813 /* PostsCellViewModel.swift */; };
-		200F55B22799B52000895813 /* FakePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55B12799B51F00895813 /* FakePostModel.swift */; };
 		200F55B5279B62F900895813 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55B4279B62F900895813 /* PostDetailViewModel.swift */; };
 		200F55B9279B655400895813 /* CommentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55B8279B655400895813 /* CommentCellViewModel.swift */; };
 		20202981279E691400BE8CB7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20202980279E691400BE8CB7 /* LoadingViewController.swift */; };
+		20202987279E72F600BE8CB7 /* FakePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F55B12799B51F00895813 /* FakePostModel.swift */; };
+		20202989279E78CF00BE8CB7 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20202988279E78CF00BE8CB7 /* MockDataService.swift */; };
 		20285A1B2797A08F00C28AF2 /* ConstraintUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */; };
 		20285A1E2797A2D900C28AF2 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */; };
 		20285A202797A37400C28AF2 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A1F2797A37400C28AF2 /* ReusableView.swift */; };
@@ -80,6 +81,7 @@
 		200F55B4279B62F900895813 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		200F55B8279B655400895813 /* CommentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellViewModel.swift; sourceTree = "<group>"; };
 		20202980279E691400BE8CB7 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		20202988279E78CF00BE8CB7 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
 		20285A1A2797A08F00C28AF2 /* ConstraintUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintUtil.swift; sourceTree = "<group>"; };
 		20285A1D2797A2D900C28AF2 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		20285A1F2797A37400C28AF2 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		20202984279E729100BE8CB7 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				200F55B12799B51F00895813 /* FakePostModel.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
 		20285A162797A01100C28AF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +203,6 @@
 				200F55A72799A51200895813 /* Post.swift */,
 				200F55A92799A58200895813 /* PostDetail.swift */,
 				200F55AB2799A5D600895813 /* User.swift */,
-				200F55B12799B51F00895813 /* FakePostModel.swift */,
 				20547203279E0D0700F195E8 /* PostRealm.swift */,
 			);
 			path = Models;
@@ -282,7 +291,9 @@
 		2091CB592797215C00E4AFB1 /* ZemogaTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				20202984279E729100BE8CB7 /* Posts */,
 				2091CB5A2797215C00E4AFB1 /* ZemogaTestTests.swift */,
+				20202988279E78CF00BE8CB7 /* MockDataService.swift */,
 			);
 			path = ZemogaTestTests;
 			sourceTree = "<group>";
@@ -564,7 +575,6 @@
 				20285A202797A37400C28AF2 /* ReusableView.swift in Sources */,
 				200F55A82799A51200895813 /* Post.swift in Sources */,
 				20285A1B2797A08F00C28AF2 /* ConstraintUtil.swift in Sources */,
-				200F55B22799B52000895813 /* FakePostModel.swift in Sources */,
 				200F55AE2799A90800895813 /* PostsViewModel.swift in Sources */,
 				205471FD279CDA4600F195E8 /* PostsServices.swift in Sources */,
 				200F55AC2799A5D600895813 /* User.swift in Sources */,
@@ -580,6 +590,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20202989279E78CF00BE8CB7 /* MockDataService.swift in Sources */,
+				20202987279E72F600BE8CB7 /* FakePostModel.swift in Sources */,
 				2091CB5B2797215C00E4AFB1 /* ZemogaTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
