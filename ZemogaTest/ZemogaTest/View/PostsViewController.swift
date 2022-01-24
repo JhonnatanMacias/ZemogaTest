@@ -21,6 +21,7 @@ class PostsViewController: UIViewController {
     
     @IBOutlet private var postSegmentedControl: UISegmentedControl!
     @IBOutlet private var tableView: UITableView!
+    let loadingVC = LoadingViewController()
     
     var viewModel: PostsViewModelProtocol? {
         didSet {
@@ -47,7 +48,7 @@ class PostsViewController: UIViewController {
                 }
             })
             
-            viewModel?.navigateToPostDetail = {  [weak self] viewModel in
+            viewModel?.navigateToPostDetail = { [weak self] viewModel in
                 guard let self = self else {
                       return
                 }
@@ -55,6 +56,22 @@ class PostsViewController: UIViewController {
                 let postDetailVC = PostViewController()
                 postDetailVC.viewModel = viewModel
                 self.navigationController?.pushViewController(postDetailVC, animated: true)
+            }
+            
+            viewModel?.displaySpinner = { [weak self]  in
+                guard let self = self else {
+                      return
+                }
+                
+                self.displaySpinner()
+            }
+            
+            viewModel?.hideSpinner = { [weak self]  in
+                guard let self = self else {
+                      return
+                }
+                
+                self.hideSpinner()
             }
         }
     }
@@ -121,8 +138,28 @@ class PostsViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "NotificationIdentifier"), object: nil)
+    }
     
     // MARK: - Internal Functions
+    
+    func displaySpinner() {
+        // Animate loadingVC over the existing views on screen
+        loadingVC.modalPresentationStyle = .overCurrentContext
+        loadingVC.modalTransitionStyle = .crossDissolve
+               
+        present(loadingVC, animated: true, completion: nil)
+    }
+    
+    func hideSpinner() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.loadingVC.dismiss(animated: true, completion: nil)
+        }
+        
+    }
     
     @IBAction func didTapRefreshButton(_ sender: Any) {
         viewModel?.getPosts()

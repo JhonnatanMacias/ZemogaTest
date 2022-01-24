@@ -29,13 +29,17 @@ protocol PostsViewModelProtocol: AnyObject {
 
     var navigateToPostDetail: ((PostDetailViewModel) -> ())? { get set}
     
-    var navigateToPostDetails: ((PostDetail) -> ())? { get set}
+    var navigateToPostDetails: ((PostDetail) -> ())? { get set }
+    var displaySpinner: ( () -> ())? { get set }
+    var hideSpinner: (() -> ())? { get set }
 }
 
 class PostsViewModel: PostsViewModelProtocol {
     
     var navigateToPostDetail: ((PostDetailViewModel) -> ())?
     var navigateToPostDetails: ((PostDetail) -> ())?
+    var displaySpinner: (() -> ())?
+    var hideSpinner: (() -> ())?
     var postModel: Bindable<[Post]> = Bindable([])
     var postAllModel: [Post] =  [Post]()
     var postFavoritesModel: Bindable<[Post]> = Bindable([])
@@ -71,11 +75,13 @@ class PostsViewModel: PostsViewModelProtocol {
     }
     
     func getPosts() {
+        displaySpinner?()
         repository.getPostFromService { [weak self] result in
             guard let self = self else {
                 return
             }
             
+            self.hideSpinner?()
             switch result {
             case .success(let posts):
                 self.setupModel(model: posts)
@@ -102,11 +108,13 @@ class PostsViewModel: PostsViewModelProtocol {
     }
     
     func viewDidLoad() {
+        
         let postAllModel = DatabaseManager.shared.fetchPosts()
         
         if postAllModel.isEmpty || postAllModel.count < 1 {
             getPosts()
         } else {
+            postsRealm = nil
             postsRealm = DatabaseManager.shared.fetchPosts()
             populateViewModelFromDB()
         }

@@ -42,7 +42,7 @@ class Post: Codable  {
                                            phone: user?.phone ?? "",
                                            webSite: user?.webSite ?? ""),
                                 isFavorite: postDetailObj?.isFavorited ?? false,
-                                comments: postDetailObj?.comments.components(separatedBy: " ,") ?? [""],
+                                comments: postDetailObj?.comments.components(separatedBy: ",") ?? [""],
                                 id: postReal.id)
     }
     
