@@ -82,11 +82,26 @@ class PostsViewModel: PostsViewModelProtocol {
             self.hideSpinner?()
             switch result {
             case .success(let posts):
-                self.setupModel(model: posts)
-                self.castingToRealmObject(model: posts)
+                let postsUpdated = self.markPostReadIfNeeded(posts: posts)
+                self.setupModel(model: postsUpdated)
+                self.castingToRealmObject(model: postsUpdated)
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+    
+    func markPostReadIfNeeded(posts: [Post]) -> [Post] {
+        
+        if posts.count < 20 {
+            return posts
+        } else {
+            var allPosts = posts
+            for i in 19...posts.count - 1 {
+                allPosts[i].read = true
+            }
+            
+            return allPosts
         }
     }
     
@@ -128,7 +143,12 @@ class PostsViewModel: PostsViewModelProtocol {
     }
     
     func storagePosts(model: [PostRealm]) {
-        DispatchQueue.main.async { 
+        DispatchQueue.main.async {
+            let postsRealm = DatabaseManager.shared.fetchPosts()
+            if !postsRealm.isEmpty {
+                DatabaseManager.shared.deleteAll(objects: postsRealm)
+            }
+            
             DatabaseManager.shared.add(posts: model)
         }
     }

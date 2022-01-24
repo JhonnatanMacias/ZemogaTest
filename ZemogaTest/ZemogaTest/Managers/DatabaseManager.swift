@@ -14,7 +14,6 @@ class DatabaseManager {
     
     static let shared = DatabaseManager()
     
-    private let realm = try! Realm()
     
     // MARK: - Lifecycle
     
@@ -22,37 +21,71 @@ class DatabaseManager {
     
     // MARK: - Work With Objects
     
+    
     func add(posts: [PostRealm]) {
-        try! realm.write {
-            realm.add(posts)
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(posts)
+            }
+        } catch let error as NSError {
+            print("An error ocurred while saving: \(error)")
         }
     }
     
+    
     func deleteAll(objects: [PostRealm]) {
-        try! realm.write {
-            realm.delete(objects)
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.delete(objects)
+            }
+        } catch let error as NSError {
+            print("An error ocurred while delete: \(error)")
         }
     }
     
     func deletePost(object: PostRealm) {
-        try! realm.write {
-            realm.delete(object)
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.delete(object)
+            }
+        } catch let error as NSError {
+            print("An error ocurred while delete an post: \(error)")
         }
     }
     
     func fetchPosts() -> [PostRealm] {
-        return Array(realm.objects(PostRealm.self))
+        do {
+            let realm = try Realm()
+            return Array(realm.objects(PostRealm.self))
+        } catch let error as NSError {
+            print("An error ocurred while update an post: \(error)")
+        }
+     
+        return [PostRealm]()
     }
     
     func markPostRead(post: PostRealm) {
-        try! realm.write {
-            post.read = true
+        do {
+            let realm = try Realm()
+            try realm.write {
+                post.read = true
+            }
+        } catch let error as NSError {
+            print("An error ocurred while update an post: \(error)")
         }
     }
     
     func markPostFavorited(post: PostRealm, isFavorited: Bool) {
-        try! realm.write {
-            post.postDetail.isFavorited  = isFavorited
+        do {
+            let realm = try Realm()
+            try realm.write {
+               post.postDetail.isFavorited  = isFavorited
+            }
+        } catch let error as NSError {
+            print("An error ocurred while update an post: \(error)")
         }
     }
     
