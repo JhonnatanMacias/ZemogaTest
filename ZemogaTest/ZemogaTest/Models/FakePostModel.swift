@@ -26,7 +26,8 @@ class FakePostModel {
                                                      isFavorite: false,
                                                      comments: ["What is Lorem Ipsum?",
                                                                 "Where does it come from?",
-                                                                "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"])))
+                                                                "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"],
+                                                     id: 1)))
         }
         
         let message2 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, here are many variations of passages of Lorem Ipsum available,"
@@ -40,7 +41,8 @@ class FakePostModel {
                                                             webSite: "jhonnatan.com"), isFavorite: true,
                                                  comments: ["What is Lorem Ipsum?",
                                                             "Where does it come from?",
-                                                            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"])))
+                                                            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"],
+                                                 id: 1)))
        
     }
     

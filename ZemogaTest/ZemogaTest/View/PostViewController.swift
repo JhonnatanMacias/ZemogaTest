@@ -198,7 +198,9 @@ class PostViewController: UIViewController {
         viewModel.postModel.value = postDetail
         viewModel.postModel = Bindable(postDetail)
         
-        NotificationCenter.default.post(name: Notification.Name("NotificationIdentifier"), object: nil)
+        NotificationCenter.default.post(name: Notification.Name("NotificationIdentifier"),
+                                        object: nil,
+                                        userInfo: ["Detail": postDetail])
         
     }
 

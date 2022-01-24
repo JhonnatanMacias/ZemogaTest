@@ -28,6 +28,8 @@
 		20285A242797AD7500C28AF2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20285A232797AD7500C28AF2 /* PostsViewController.swift */; };
 		205471FD279CDA4600F195E8 /* PostsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205471FC279CDA4600F195E8 /* PostsServices.swift */; };
 		205471FF279CE31100F195E8 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205471FE279CE31100F195E8 /* BaseService.swift */; };
+		20547202279DFB1100F195E8 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20547201279DFB1100F195E8 /* DatabaseManager.swift */; };
+		20547204279E0D0700F195E8 /* PostRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20547203279E0D0700F195E8 /* PostRealm.swift */; };
 		2091CB442797215700E4AFB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB432797215700E4AFB1 /* AppDelegate.swift */; };
 		2091CB462797215700E4AFB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB452797215700E4AFB1 /* SceneDelegate.swift */; };
 		2091CB482797215700E4AFB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091CB472797215700E4AFB1 /* ViewController.swift */; };
@@ -83,6 +85,8 @@
 		20285A232797AD7500C28AF2 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		205471FC279CDA4600F195E8 /* PostsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsServices.swift; sourceTree = "<group>"; };
 		205471FE279CE31100F195E8 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		20547201279DFB1100F195E8 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		20547203279E0D0700F195E8 /* PostRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRealm.swift; sourceTree = "<group>"; };
 		2091CB402797215700E4AFB1 /* ZemogaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZemogaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091CB432797215700E4AFB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2091CB452797215700E4AFB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 				200F55A92799A58200895813 /* PostDetail.swift */,
 				200F55AB2799A5D600895813 /* User.swift */,
 				200F55B12799B51F00895813 /* FakePostModel.swift */,
+				20547203279E0D0700F195E8 /* PostRealm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +227,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		20547200279DFAC800F195E8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				20547201279DFB1100F195E8 /* DatabaseManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		2091CB372797215700E4AFB1 = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +260,7 @@
 		2091CB422797215700E4AFB1 /* ZemogaTest */ = {
 			isa = PBXGroup;
 			children = (
+				20547200279DFAC800F195E8 /* Managers */,
 				205471FB279CDA3200F195E8 /* Services */,
 				20285A192797A02F00C28AF2 /* Utils */,
 				20285A182797A02800C28AF2 /* Models */,
@@ -530,6 +544,7 @@
 			files = (
 				200F55B02799AA2800895813 /* PostsCellViewModel.swift in Sources */,
 				200F55A02798FFD000895813 /* PostViewController.swift in Sources */,
+				20547202279DFB1100F195E8 /* DatabaseManager.swift in Sources */,
 				200F55A42799141B00895813 /* UserInfoView.swift in Sources */,
 				200F55A62799197800895813 /* PostTableViewCell.swift in Sources */,
 				200F559E2798E21400895813 /* PostsTableViewCell.swift in Sources */,
@@ -551,6 +566,7 @@
 				200F55AC2799A5D600895813 /* User.swift in Sources */,
 				2091CB462797215700E4AFB1 /* SceneDelegate.swift in Sources */,
 				200F559C2798C89800895813 /* UIColor+Extension.swift in Sources */,
+				20547204279E0D0700F195E8 /* PostRealm.swift in Sources */,
 				205471FF279CE31100F195E8 /* BaseService.swift in Sources */,
 				200F55A2279907E300895813 /* UIView+Extension.swift in Sources */,
 			);

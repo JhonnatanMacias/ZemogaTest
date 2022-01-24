@@ -59,7 +59,6 @@ class PostsViewController: UIViewController {
         }
     }
     
-    
     // MARK: - Initializer
     
     override func viewDidLoad() {
@@ -67,15 +66,19 @@ class PostsViewController: UIViewController {
         
         title = Constants.pageTitle
         setupViews()
-        viewModel = PostsViewModel() // model: FakePostModel().model
+        viewModel = PostsViewModel()
+        viewModel?.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("NotificationIdentifier"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(favoritePost(aNotification:)), name: NSNotification.Name.init("NotificationIdentifier"), object: nil)
         
-        viewModel?.getPosts()
     }
     
-    @objc func methodOfReceivedNotification(notification: Notification) {
-        tableView.reloadData()
+    @objc func favoritePost(aNotification: NSNotification) {
+        if let userInfo = aNotification.userInfo,
+           let postDetail = userInfo["Detail"] as? PostDetail {
+            viewModel?.markPostLikeFavorite(postDetail: postDetail)
+            tableView.reloadData()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -164,11 +167,11 @@ extension PostsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let viewModel = viewModel {
             viewModel.postModel.value[indexPath.row].read = true
-            viewModel.postSelected(postViewModel: viewModel.cellsViewModel.value[indexPath.row].postDetailViewModel.value)
+            viewModel.postSelected(postViewModel: viewModel.cellsViewModel.value[indexPath.row].postDetailViewModel.value,
+                                   post: viewModel.postModel.value[indexPath.row])
         }
     }
     
-  
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
           return true
       }
@@ -177,12 +180,13 @@ extension PostsViewController: UITableViewDelegate {
           return UITableViewCell.EditingStyle.delete
       }
       
-           // Establecer la operación después de hacer clic en eliminar
       func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
           if editingStyle == .delete {
+              guard let viewModel = viewModel else { return }
               // Delete the row from the data source
               tableView.beginUpdates()
-              viewModel?.removePost(index: indexPath.row)
+              viewModel.removePost(index: indexPath.row,
+                                   post: viewModel.postModel.value[indexPath.row])
               tableView.deleteRows(at: [indexPath], with: .fade)
               tableView.endUpdates()
           }

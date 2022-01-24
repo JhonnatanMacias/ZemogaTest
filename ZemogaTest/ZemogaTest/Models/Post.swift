@@ -6,14 +6,13 @@
 //
 
 import Foundation
-import RealmSwift
 
-class Post: Object, Codable  {
+class Post: Codable  {
     
-    @objc dynamic var id: Int = 0
-    @objc dynamic var read: Bool = false
-    @objc dynamic var message: String = ""
-    @objc dynamic var postDetail: PostDetail! = PostDetail()
+    var id: Int = 0
+    var read: Bool = false
+    var message: String = ""
+    var postDetail: PostDetail = PostDetail()
     
     enum CodingKeys: String, CodingKey {
         case id, read, message
@@ -28,38 +27,23 @@ class Post: Object, Codable  {
         self.postDetail = postDetail
     }
     
-    override init() {}
+    init() {}
+    
+    init(postReal: PostRealm) {
+        id = postReal.id
+        read = postReal.read
+        message = postReal.message
+        
+        let postDetailObj = postReal.postDetail
+        let user = postReal.postDetail.user
+        postDetail = PostDetail(postDescription: postDetailObj?.postDescription ?? "",
+                                user: User(name: user?.name ?? "",
+                                           email: user?.email ?? "",
+                                           phone: user?.phone ?? "",
+                                           webSite: user?.webSite ?? ""),
+                                isFavorite: postDetailObj?.isFavorited ?? false,
+                                comments: postDetailObj?.comments.components(separatedBy: " ,") ?? [""],
+                                id: postReal.id)
+    }
     
 }
-
-// MARK: - PostElement
-//class PostElement: Codable {
-//    let id: Int
-//    var read: Bool = false
-//    var message: String = ""
-//    let postDetail: PostDetail
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id, read, message
-//        case postDetail = "PostDetail"
-//    }
-//}
-
-// MARK: - PostDetail
-//class PostDetail: Codable {
-//    var title: String = ""
-//    var isFavorited: Bool = false
-//    var comments: [String] = []
-//    var user: Users
-//}
-
-// MARK: - User
-//class Users: Codable {
-//    var name: String
-//    var email: String
-//    var phone: String
-//    var webSite: String
-//}
-
-//typealias Post = [PostElement]
-

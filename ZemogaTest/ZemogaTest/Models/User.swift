@@ -6,14 +6,13 @@
 //
 
 import Foundation
-import RealmSwift
 
-class User: Object, Codable {
+class User: Codable {
     
-    @objc dynamic var name: String = ""
-    @objc dynamic var phone: String = ""
-    @objc dynamic var email: String = ""
-    @objc dynamic var webSite: String = ""
+    var name: String = ""
+    var phone: String = ""
+    var email: String = ""
+    var webSite: String = ""
     
     // MARK: - Initializers
 
@@ -24,5 +23,5 @@ class User: Object, Codable {
         self.webSite = webSite
     }
     
-    override init() {}
+    init() {}
 }

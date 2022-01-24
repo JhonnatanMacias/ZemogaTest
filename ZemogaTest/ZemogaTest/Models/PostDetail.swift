@@ -6,25 +6,24 @@
 //
 
 import Foundation
-import RealmSwift
 
-class PostDetail: Object, Codable {
+class PostDetail: Codable {
     
-    @objc dynamic var postDescription: String = ""
-    @objc dynamic  var user: User!
+    var id: Int = 0
+    var postDescription: String = ""
+    var user: User!
     var comments: [String] = []
-    @objc dynamic  var isFavorited: Bool = false
-    
-    var commentsObj: List<String>? = List<String>()
+    var isFavorited: Bool = false
     
     // MARK: - Initializers
 
-    init(postDescription: String, user: User, isFavorite: Bool, comments: [String]) {
+    init(postDescription: String, user: User, isFavorite: Bool, comments: [String], id: Int) {
         self.postDescription = postDescription
         self.user = user
         self.comments = comments
         self.isFavorited = isFavorite
+        self.id = id
     }
     
-    override init() {}
+    init() {}
 }
