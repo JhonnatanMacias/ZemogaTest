@@ -7,65 +7,183 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EC916F1611E18149E09A2F230BACBA7 /* Pods-ZemogaTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE64DCEA22A24F4FB4ACD1DC4C824D /* Pods-ZemogaTest-dummy.m */; };
-		10168ADAB16C5C11CFBCF6CCB49101A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		56CA4398858F389F8C4049BF5724CF27 /* Pods-ZemogaTestTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 618AEB951120C3C9D13FF406783A2C3D /* Pods-ZemogaTestTests-dummy.m */; };
-		66546741E57B3CC6D7F5B1EE570B3EF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		AADD40AACA5C08F0833FA8D9F6AC0496 /* Pods-ZemogaTest-ZemogaTestUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F0FF58A3542CF7EA2F83B2055D6BBC /* Pods-ZemogaTest-ZemogaTestUITests-dummy.m */; };
-		B89554ED88E3EDE136A5739C3B49B778 /* Pods-ZemogaTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5431469948DACB7F0449933DF31CD7BD /* Pods-ZemogaTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9FF9E414A35215D3092B562D5170185 /* Pods-ZemogaTest-ZemogaTestUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1B8C2BBE33B311C14B1E7E53624296 /* Pods-ZemogaTest-ZemogaTestUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA67B5220071B43101071D6B4C2E61CE /* Pods-ZemogaTestTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04EB9547518C4BEBF842426D6E392 /* Pods-ZemogaTestTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3A607CC6C0B07294D9C005698977159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		005B319B494ED2DAA239B9939A504DFC /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 232AEA81993A782D036395A7E76B0791 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		045DE6EBF9B2F63F60F5BE60C1198E06 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB1C24916D682028695FE189FB604A /* RedirectHandler.swift */; };
+		04A896288CE3A59B530250337A5F8362 /* Result+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E303F43B8A77B1098439AA7483C11E /* Result+Alamofire.swift */; };
+		054914C97F1AFA8BD7117D4B8A23B4B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		0F4037DBF307AC8058BD0A3D35C7E7E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		10168ADAB16C5C11CFBCF6CCB49101A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		1976BB7D7E26A12E29283E71154B63B3 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF86DB2F034B2435E33314C6B2D948 /* SessionDelegate.swift */; };
+		1EE44196E7BCE57AD96A2C751651EF40 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1F67D4470AC46B80B387ACC74592E /* AlamofireExtended.swift */; };
+		2057BBE8EF6F24D723EBF277ED5D8A30 /* Pods-ZemogaTest-ZemogaTestUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BDF5798333A22038A4CC7E99AEA30DA /* Pods-ZemogaTest-ZemogaTestUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CBE3651CA006E19F5D64A2DE9B9A028 /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDA57764A8E03532C6B4955E87CDD8F /* CachedResponseHandler.swift */; };
+		2CCD13099063CD560E3067BD132914FA /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1774BF767AC3195D750B0871A8FCDFD2 /* Notifications.swift */; };
+		33A7D0F2D03004CE256A75E03DF33C70 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D19944393970C1F09CDC2904AD40A95 /* RetryPolicy.swift */; };
+		3C4059621E23842C19D4EB5D35B41989 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F0E367AD0EFC79467D657D126B9FBD /* Validation.swift */; };
+		46A64A43AFA057B6B63C8F0C12F509B4 /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D611F243BC3328826FE250D806EC26 /* Combine.swift */; };
+		55AABB1FB38F61A3369ACC555FF3046D /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F537E69AFE9E127B99581572E13B3DB5 /* Alamofire-dummy.m */; };
+		56CA4398858F389F8C4049BF5724CF27 /* Pods-ZemogaTestTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE785F9696D2E1D7D24F6F33FFBDC00C /* Pods-ZemogaTestTests-dummy.m */; };
+		576A1F360049C7368840718E2658CD0B /* Pods-ZemogaTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E95EFB310BE5BAD1477D57BCAD5077E /* Pods-ZemogaTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68FB2DCB4C77DBCAF9A6037E470F2BDE /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD249F0D0A2E91B343CC78CFEEDBA5 /* ParameterEncoding.swift */; };
+		7483E5327027263F7E4B94A2997191C4 /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D0A888B6B006A1A7EEB01E95E4D87F /* AuthenticationInterceptor.swift */; };
+		75966A9262648D4647D764E3E76BC6AC /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8637848096C1E040096D350A02F8E944 /* Response.swift */; };
+		7930C94414B4C661867AC4FBE82E996C /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9AD930B7FD9D7787669151B33CC50A /* URLEncodedFormEncoder.swift */; };
+		7B068137A8925891446203B5D3D6A4ED /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */; };
+		7E02F5B62BE00E97847DF549FFED2490 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182033E9A6905A038E4EBCEF9C9F45C0 /* HTTPHeaders.swift */; };
+		7F1BB526AAE3ECDCE90127D9D0E10261 /* StringEncoding+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429E09ACA40025B318451DB5BBD5429 /* StringEncoding+Alamofire.swift */; };
+		7FE695DA8EE7FF1286556E06B692009B /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9DC57828C893A0DBC04D18ECCE398 /* MultipartFormData.swift */; };
+		808C960C82D708FC1A42C581D6CB4940 /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE13171346B1A07721DCCA31970B8255 /* URLSessionConfiguration+Alamofire.swift */; };
+		81B8D2B7CEB25C2448B0BC9B33591A65 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D97FB483508422ACE73BA88223F05 /* Session.swift */; };
+		824D816B1EE404F2DD400EE678695CBE /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A35AA383B0322648386EF285798BBD0 /* ResponseSerialization.swift */; };
+		8D75FC8D7476C9674234F39F1A820D8C /* URLConvertible+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423DDAB27DA675FAD3F4CEFD00A0087 /* URLConvertible+URLRequestConvertible.swift */; };
+		99D058E53EFEE3AC4857CDE3DBA5C004 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0F9CBC87264EB1B5B841925808649D /* ParameterEncoder.swift */; };
+		9C9030DEDB0DF955B16FE08C50892D57 /* Concurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55B19C6B7FFB66485714B5DE544E4FC /* Concurrency.swift */; };
+		A29100AA1876DDEFF6F54694A51FDB0E /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B41CCCDFCF0C04AF8C2DD34A7D594B /* NetworkReachabilityManager.swift */; };
+		A53BDE589BDD6483F3EEDCE5EA1DCCD3 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317CAA4F2337FF0A55F807FA1B1D2A2 /* Protected.swift */; };
+		B3658C29BBDE1033F6269A92E612CB30 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B49B6E385714464DB6F39C69CDCF3AD /* Request.swift */; };
+		B64BF27630B8BC5F26EC538F38BE8A01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */; };
+		B704B198B9B520D449260877E300D821 /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717700B23478BFC9261269EEC9FABE6E /* ServerTrustEvaluation.swift */; };
+		BC0ECA8F22DEDE8886E189CD0EAA1197 /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F89094F10FCB5CD6FAFD56DF1BE1D1 /* URLRequest+Alamofire.swift */; };
+		CA67B5220071B43101071D6B4C2E61CE /* Pods-ZemogaTestTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5CDA5BDE0B792B36FBF980BA1CD89B /* Pods-ZemogaTestTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEBFFEED65D877702B2F36102528CF6D /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FEA7D0ABAF694A3F75736158344A91 /* EventMonitor.swift */; };
+		D0EA90FBF83350C49E6EF6C8A98D6F00 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91762C69C08629CBFD921AEBACE63AED /* AFError.swift */; };
+		D338E1DDFC820164072B5D4A18157F15 /* Pods-ZemogaTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4FF1F2B94CE235A517D1FC892673A9 /* Pods-ZemogaTest-dummy.m */; };
+		D6B4751CED01D53E4A1B6A571AAA2F83 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22772149E6EB9A7609B1C3A69CA7B4F /* HTTPMethod.swift */; };
+		DA34899BEF0668D76CBCE8C4CE47B97B /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E761F63EACA04B9944E3B8D8CDAF64C /* RequestTaskMap.swift */; };
+		DD902FE8D6824681C929D028655AE121 /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF0A0974AB3647E46E265B59FAFE7DC /* RequestInterceptor.swift */; };
+		E54654D504A42C24F284A68F87F7671D /* OperationQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD27E56025A1A7F604285792B21A6B1 /* OperationQueue+Alamofire.swift */; };
+		E9B4C89E7EB3B27D46AFCA452C3D426F /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DFCB8FA58015D2F0126EFB683CD108 /* MultipartUpload.swift */; };
+		EEC150B66BCCD6C80FDA7E4D1975166B /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57628633C1D230EA7BE5C721583E4E7 /* DispatchQueue+Alamofire.swift */; };
+		F17A4CA4664CABB331D39FE902E06843 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5171E9945557BE43DD708B176B63C4 /* Alamofire.swift */; };
+		FB95B55E32109BFFB24CA6134B4F6779 /* Pods-ZemogaTest-ZemogaTestUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE3076F7099C6BEC7248120DC5C35A9 /* Pods-ZemogaTest-ZemogaTestUITests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A5382E0F9801B7B8073B3E13290D1218 /* PBXContainerItemProxy */ = {
+		48CC2BE97FE8F96F9DF6BFDDE0390780 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		604F1136A2DD28DEE2DC6207D27032E8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 75535EDC2F3E82B870702117AD7C7A8B;
 			remoteInfo = "Pods-ZemogaTest";
 		};
+		CCFFE0C95BC32A7B1A09BD7D248365C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0667099A354F60748F430D2DFA9BE690 /* Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		0B2B724CD9DB63F0F9779BCC9DDDCECA /* Pods-ZemogaTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTestTests.debug.xcconfig"; sourceTree = "<group>"; };
-		0EFEC85066873D94229EDD3BE64A43D4 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		12215D18DF6776E9E244E28B02E5D0E6 /* Pods-ZemogaTestTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZemogaTestTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1425AEAC93005E2BCF124172D25D98EE /* Pods-ZemogaTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTestTests.release.xcconfig"; sourceTree = "<group>"; };
-		1FFE64DCEA22A24F4FB4ACD1DC4C824D /* Pods-ZemogaTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZemogaTest-dummy.m"; sourceTree = "<group>"; };
-		24348B85C75E8BB196A8D7DEF8F1708F /* Pods-ZemogaTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTest-acknowledgements.plist"; sourceTree = "<group>"; };
-		2C1B8C2BBE33B311C14B1E7E53624296 /* Pods-ZemogaTest-ZemogaTestUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZemogaTest-ZemogaTestUITests-umbrella.h"; sourceTree = "<group>"; };
-		410100FC93DC2BFF1E9FBED853504D74 /* Pods-ZemogaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTest.debug.xcconfig"; sourceTree = "<group>"; };
-		4A54963F2095EADB15F6921A76525495 /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5431469948DACB7F0449933DF31CD7BD /* Pods-ZemogaTest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZemogaTest-umbrella.h"; sourceTree = "<group>"; };
-		6090F2BEB29796BBDF1824B43718298A /* Pods-ZemogaTestTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTestTests-Info.plist"; sourceTree = "<group>"; };
-		618AEB951120C3C9D13FF406783A2C3D /* Pods-ZemogaTestTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZemogaTestTests-dummy.m"; sourceTree = "<group>"; };
-		71A4E8DA0F1DBC5C75B83B1BD7A5FC76 /* Pods-ZemogaTest-ZemogaTestUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZemogaTest-ZemogaTestUITests.modulemap"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		75AE7590BB1E1B6031D04B9B1713E1F3 /* Pods-ZemogaTest-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTest-Info.plist"; sourceTree = "<group>"; };
-		77F0FF58A3542CF7EA2F83B2055D6BBC /* Pods-ZemogaTest-ZemogaTestUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZemogaTest-ZemogaTestUITests-dummy.m"; sourceTree = "<group>"; };
+		02F0E367AD0EFC79467D657D126B9FBD /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		0A3EB6508561F9676FE95486B422B72D /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		0FC87ABC5B6B283640F8D0833EDABE90 /* Pods-ZemogaTest-ZemogaTestUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZemogaTest-ZemogaTestUITests.modulemap"; sourceTree = "<group>"; };
+		15D0A888B6B006A1A7EEB01E95E4D87F /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
+		1774BF767AC3195D750B0871A8FCDFD2 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		182033E9A6905A038E4EBCEF9C9F45C0 /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
+		19B9DC57828C893A0DBC04D18ECCE398 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		1E95EFB310BE5BAD1477D57BCAD5077E /* Pods-ZemogaTest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZemogaTest-umbrella.h"; sourceTree = "<group>"; };
+		232AEA81993A782D036395A7E76B0791 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		240F3DE373F3461980ABA708F6C167AB /* Pods-ZemogaTest-ZemogaTestUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTest-ZemogaTestUITests-Info.plist"; sourceTree = "<group>"; };
+		29F46E1DE72797421136BFF061694392 /* Pods-ZemogaTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZemogaTest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2A35AA383B0322648386EF285798BBD0 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		2E4FF1F2B94CE235A517D1FC892673A9 /* Pods-ZemogaTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZemogaTest-dummy.m"; sourceTree = "<group>"; };
+		3423DDAB27DA675FAD3F4CEFD00A0087 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
+		3B0D97FB483508422ACE73BA88223F05 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Session.swift; sourceTree = "<group>"; };
+		42D611F243BC3328826FE250D806EC26 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
+		467153C9177F24DB2F470E63C3087832 /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		47DFCB8FA58015D2F0126EFB683CD108 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
+		4A0F9CBC87264EB1B5B841925808649D /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/ParameterEncoder.swift; sourceTree = "<group>"; };
+		4BDF5798333A22038A4CC7E99AEA30DA /* Pods-ZemogaTest-ZemogaTestUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZemogaTest-ZemogaTestUITests-umbrella.h"; sourceTree = "<group>"; };
+		50AB1C24916D682028695FE189FB604A /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
+		53F89094F10FCB5CD6FAFD56DF1BE1D1 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
+		552D714AD0B8E818AE4D3448FEDB40AC /* Pods-ZemogaTestTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTestTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5B49B6E385714464DB6F39C69CDCF3AD /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF0A0974AB3647E46E265B59FAFE7DC /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
+		636EA79FCEDDBD2E45BFEEEFBA36D386 /* Pods-ZemogaTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZemogaTest-frameworks.sh"; sourceTree = "<group>"; };
+		6CD6C9B396599AF71208BBAAA1707862 /* Pods-ZemogaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTest.release.xcconfig"; sourceTree = "<group>"; };
+		6D19944393970C1F09CDC2904AD40A95 /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
+		6E761F63EACA04B9944E3B8D8CDAF64C /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/RequestTaskMap.swift; sourceTree = "<group>"; };
+		717700B23478BFC9261269EEC9FABE6E /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
+		7A079D6ED48DB3869557120FCF3D62F7 /* Pods-ZemogaTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		7BE03A65D6B1B657653E25AFC364461D /* Pods-ZemogaTest-ZemogaTestUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ZemogaTest-ZemogaTestUITests"; path = Pods_ZemogaTest_ZemogaTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E8B10A001940FE91C0CA25F92BA22C /* Pods-ZemogaTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8637848096C1E040096D350A02F8E944 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		8A4C466C02A4ADB878BDE3F3452E7FDB /* Pods-ZemogaTestTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ZemogaTestTests"; path = Pods_ZemogaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C5749C8A261C1771F0C19FF2DD5F83F /* Pods-ZemogaTestTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZemogaTestTests.modulemap"; sourceTree = "<group>"; };
-		99759CDD76FAF1618995EFF5443428EC /* Pods-ZemogaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTest.release.xcconfig"; sourceTree = "<group>"; };
-		9AC22E9C96546B2552328FCAE5566C80 /* Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8B5171E9945557BE43DD708B176B63C4 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		8FA13B85DD2CCCA34AFFE3F7ECE4B995 /* Pods-ZemogaTest-ZemogaTestUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZemogaTest-ZemogaTestUITests-frameworks.sh"; sourceTree = "<group>"; };
+		9004C2E27B7F9FA32BC9B07CD98CDCE0 /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
+		91762C69C08629CBFD921AEBACE63AED /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		937B7E9F97452CC1C185E3A5BC0F861C /* Pods-ZemogaTestTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZemogaTestTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9429E09ACA40025B318451DB5BBD5429 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
 		9C53D761875D66AEC8C637B277736D77 /* Pods-ZemogaTest */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ZemogaTest"; path = Pods_ZemogaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B3D04EB9547518C4BEBF842426D6E392 /* Pods-ZemogaTestTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZemogaTestTests-umbrella.h"; sourceTree = "<group>"; };
-		BC617E9E19BA33A665EA696645D1FBBB /* Pods-ZemogaTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZemogaTest-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D36F3DC0C3297FB8DEC75C9551731D6D /* Pods-ZemogaTest-ZemogaTestUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTest-ZemogaTestUITests-Info.plist"; sourceTree = "<group>"; };
-		E7E09A3E86A6F18A6F80B4CFCFE8B9CF /* Pods-ZemogaTestTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTestTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E861071F18F368E1B5FE142757CFD21A /* Pods-ZemogaTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZemogaTest.modulemap"; sourceTree = "<group>"; };
+		9CD27E56025A1A7F604285792B21A6B1 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0FEA7D0ABAF694A3F75736158344A91 /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/EventMonitor.swift; sourceTree = "<group>"; };
+		A14776BA5922D18F68D902BC0053E0C1 /* Pods-ZemogaTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTest-acknowledgements.plist"; sourceTree = "<group>"; };
+		A22772149E6EB9A7609B1C3A69CA7B4F /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
+		A4953B7FBF888C855983463F65AC3E14 /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
+		A68F122F552E578FC684096C7287961D /* Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B318DA12A566F831FAFDE13A551B08E8 /* Pods-ZemogaTest-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTest-Info.plist"; sourceTree = "<group>"; };
+		BDF1F67D4470AC46B80B387ACC74592E /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/AlamofireExtended.swift; sourceTree = "<group>"; };
+		BE785F9696D2E1D7D24F6F33FFBDC00C /* Pods-ZemogaTestTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZemogaTestTests-dummy.m"; sourceTree = "<group>"; };
+		BFE3076F7099C6BEC7248120DC5C35A9 /* Pods-ZemogaTest-ZemogaTestUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZemogaTest-ZemogaTestUITests-dummy.m"; sourceTree = "<group>"; };
+		C317CAA4F2337FF0A55F807FA1B1D2A2 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
+		CCDA57764A8E03532C6B4955E87CDD8F /* CachedResponseHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedResponseHandler.swift; path = Source/CachedResponseHandler.swift; sourceTree = "<group>"; };
+		D0B41CCCDFCF0C04AF8C2DD34A7D594B /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		D0DD249F0D0A2E91B343CC78CFEEDBA5 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		D5D6600827B6C3F8CE1B3C4E2C293BBE /* Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D7A9E174F583688840339C3DA66E5D57 /* Pods-ZemogaTestTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZemogaTestTests-Info.plist"; sourceTree = "<group>"; };
+		DAB3F4DEC660EA4E0D1518B65C6A9A91 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
+		DDEF86DB2F034B2435E33314C6B2D948 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		DE9AD930B7FD9D7787669151B33CC50A /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
+		E1F93FDFACEB746900EE9D34F5BB8D7A /* Pods-ZemogaTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZemogaTest.modulemap"; sourceTree = "<group>"; };
+		E2EC6687E41CE5AE7B75A470A6010A50 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E57628633C1D230EA7BE5C721583E4E7 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		E8377643F4CEADAC51EC1B49D1003779 /* Pods-ZemogaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZemogaTest.debug.xcconfig"; sourceTree = "<group>"; };
+		EC902C21824859070D77B8E11E82352C /* Pods-ZemogaTestTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZemogaTestTests.modulemap"; sourceTree = "<group>"; };
+		ED5CDA5BDE0B792B36FBF980BA1CD89B /* Pods-ZemogaTestTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZemogaTestTests-umbrella.h"; sourceTree = "<group>"; };
+		F3E303F43B8A77B1098439AA7483C11E /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Result+Alamofire.swift"; sourceTree = "<group>"; };
+		F537E69AFE9E127B99581572E13B3DB5 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		F55B19C6B7FFB66485714B5DE544E4FC /* Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Concurrency.swift; path = Source/Concurrency.swift; sourceTree = "<group>"; };
+		FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FE13171346B1A07721DCCA31970B8255 /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
+		FF784AECAB1CF4D8E63DFB863F9B8E55 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4A5D2FD613A9B2B4B59C3DF751AD3E98 /* Frameworks */ = {
+		15DC142A7EE833251AA37FC8E2B8E01F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66546741E57B3CC6D7F5B1EE570B3EF4 /* Foundation.framework in Frameworks */,
+				7B068137A8925891446203B5D3D6A4ED /* CFNetwork.framework in Frameworks */,
+				0F4037DBF307AC8058BD0A3D35C7E7E9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A31F67A49819DE9A0671AE40E089C98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				054914C97F1AFA8BD7117D4B8A23B4B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C58A2940B7FEA14AED27FC68F2449BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64BF27630B8BC5F26EC538F38BE8A01 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,52 +195,149 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D000D3326C41FCDD260F7D9A33E0525B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F3A607CC6C0B07294D9C005698977159 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02A502467CBB8E0DD5045D9360AD2279 /* Pods-ZemogaTest */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E861071F18F368E1B5FE142757CFD21A /* Pods-ZemogaTest.modulemap */,
-				BC617E9E19BA33A665EA696645D1FBBB /* Pods-ZemogaTest-acknowledgements.markdown */,
-				24348B85C75E8BB196A8D7DEF8F1708F /* Pods-ZemogaTest-acknowledgements.plist */,
-				1FFE64DCEA22A24F4FB4ACD1DC4C824D /* Pods-ZemogaTest-dummy.m */,
-				75AE7590BB1E1B6031D04B9B1713E1F3 /* Pods-ZemogaTest-Info.plist */,
-				5431469948DACB7F0449933DF31CD7BD /* Pods-ZemogaTest-umbrella.h */,
-				410100FC93DC2BFF1E9FBED853504D74 /* Pods-ZemogaTest.debug.xcconfig */,
-				99759CDD76FAF1618995EFF5443428EC /* Pods-ZemogaTest.release.xcconfig */,
+				61C8CC330A5CA84DA2F5F1D32AB07069 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B0810928A6319057A946D6BCAD4DD5E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF784AECAB1CF4D8E63DFB863F9B8E55 /* Alamofire.modulemap */,
+				F537E69AFE9E127B99581572E13B3DB5 /* Alamofire-dummy.m */,
+				9004C2E27B7F9FA32BC9B07CD98CDCE0 /* Alamofire-Info.plist */,
+				0A3EB6508561F9676FE95486B422B72D /* Alamofire-prefix.pch */,
+				232AEA81993A782D036395A7E76B0791 /* Alamofire-umbrella.h */,
+				A4953B7FBF888C855983463F65AC3E14 /* Alamofire.debug.xcconfig */,
+				DAB3F4DEC660EA4E0D1518B65C6A9A91 /* Alamofire.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		2C7DB3654201BAC8005EE30CE843789D /* Pods-ZemogaTest */ = {
+			isa = PBXGroup;
+			children = (
+				E1F93FDFACEB746900EE9D34F5BB8D7A /* Pods-ZemogaTest.modulemap */,
+				29F46E1DE72797421136BFF061694392 /* Pods-ZemogaTest-acknowledgements.markdown */,
+				A14776BA5922D18F68D902BC0053E0C1 /* Pods-ZemogaTest-acknowledgements.plist */,
+				2E4FF1F2B94CE235A517D1FC892673A9 /* Pods-ZemogaTest-dummy.m */,
+				636EA79FCEDDBD2E45BFEEEFBA36D386 /* Pods-ZemogaTest-frameworks.sh */,
+				B318DA12A566F831FAFDE13A551B08E8 /* Pods-ZemogaTest-Info.plist */,
+				1E95EFB310BE5BAD1477D57BCAD5077E /* Pods-ZemogaTest-umbrella.h */,
+				E8377643F4CEADAC51EC1B49D1003779 /* Pods-ZemogaTest.debug.xcconfig */,
+				6CD6C9B396599AF71208BBAAA1707862 /* Pods-ZemogaTest.release.xcconfig */,
 			);
 			name = "Pods-ZemogaTest";
 			path = "Target Support Files/Pods-ZemogaTest";
 			sourceTree = "<group>";
 		};
-		196D5AE7075869B98CB21916B304C567 /* Pods-ZemogaTest-ZemogaTestUITests */ = {
+		3D2BC9BBC23AC05AB41FA3DADAE76AA1 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				71A4E8DA0F1DBC5C75B83B1BD7A5FC76 /* Pods-ZemogaTest-ZemogaTestUITests.modulemap */,
-				9AC22E9C96546B2552328FCAE5566C80 /* Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.markdown */,
-				0667099A354F60748F430D2DFA9BE690 /* Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.plist */,
-				77F0FF58A3542CF7EA2F83B2055D6BBC /* Pods-ZemogaTest-ZemogaTestUITests-dummy.m */,
-				D36F3DC0C3297FB8DEC75C9551731D6D /* Pods-ZemogaTest-ZemogaTestUITests-Info.plist */,
-				2C1B8C2BBE33B311C14B1E7E53624296 /* Pods-ZemogaTest-ZemogaTestUITests-umbrella.h */,
-				0EFEC85066873D94229EDD3BE64A43D4 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */,
-				4A54963F2095EADB15F6921A76525495 /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */,
+				2C7DB3654201BAC8005EE30CE843789D /* Pods-ZemogaTest */,
+				6267F6306FDA84E1DAE34C67A918564F /* Pods-ZemogaTest-ZemogaTestUITests */,
+				4510ED334647B71ACDA1B5B8CA9A27B4 /* Pods-ZemogaTestTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4510ED334647B71ACDA1B5B8CA9A27B4 /* Pods-ZemogaTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC902C21824859070D77B8E11E82352C /* Pods-ZemogaTestTests.modulemap */,
+				937B7E9F97452CC1C185E3A5BC0F861C /* Pods-ZemogaTestTests-acknowledgements.markdown */,
+				552D714AD0B8E818AE4D3448FEDB40AC /* Pods-ZemogaTestTests-acknowledgements.plist */,
+				BE785F9696D2E1D7D24F6F33FFBDC00C /* Pods-ZemogaTestTests-dummy.m */,
+				D7A9E174F583688840339C3DA66E5D57 /* Pods-ZemogaTestTests-Info.plist */,
+				ED5CDA5BDE0B792B36FBF980BA1CD89B /* Pods-ZemogaTestTests-umbrella.h */,
+				84E8B10A001940FE91C0CA25F92BA22C /* Pods-ZemogaTestTests.debug.xcconfig */,
+				7A079D6ED48DB3869557120FCF3D62F7 /* Pods-ZemogaTestTests.release.xcconfig */,
+			);
+			name = "Pods-ZemogaTestTests";
+			path = "Target Support Files/Pods-ZemogaTestTests";
+			sourceTree = "<group>";
+		};
+		61C8CC330A5CA84DA2F5F1D32AB07069 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8D3D57353834825F7B52B816066B7789 /* CFNetwork.framework */,
+				FD0CE05D5D076B1B5190EE5DF97FD54E /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6267F6306FDA84E1DAE34C67A918564F /* Pods-ZemogaTest-ZemogaTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0FC87ABC5B6B283640F8D0833EDABE90 /* Pods-ZemogaTest-ZemogaTestUITests.modulemap */,
+				D5D6600827B6C3F8CE1B3C4E2C293BBE /* Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.markdown */,
+				A68F122F552E578FC684096C7287961D /* Pods-ZemogaTest-ZemogaTestUITests-acknowledgements.plist */,
+				BFE3076F7099C6BEC7248120DC5C35A9 /* Pods-ZemogaTest-ZemogaTestUITests-dummy.m */,
+				8FA13B85DD2CCCA34AFFE3F7ECE4B995 /* Pods-ZemogaTest-ZemogaTestUITests-frameworks.sh */,
+				240F3DE373F3461980ABA708F6C167AB /* Pods-ZemogaTest-ZemogaTestUITests-Info.plist */,
+				4BDF5798333A22038A4CC7E99AEA30DA /* Pods-ZemogaTest-ZemogaTestUITests-umbrella.h */,
+				E2EC6687E41CE5AE7B75A470A6010A50 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */,
+				467153C9177F24DB2F470E63C3087832 /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */,
 			);
 			name = "Pods-ZemogaTest-ZemogaTestUITests";
 			path = "Target Support Files/Pods-ZemogaTest-ZemogaTestUITests";
 			sourceTree = "<group>";
 		};
-		49A5C1A7D40D6EFB21D732FABFE65495 /* Products */ = {
+		8E167B633C802817B2BE74255F6EE178 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
+				91762C69C08629CBFD921AEBACE63AED /* AFError.swift */,
+				8B5171E9945557BE43DD708B176B63C4 /* Alamofire.swift */,
+				BDF1F67D4470AC46B80B387ACC74592E /* AlamofireExtended.swift */,
+				15D0A888B6B006A1A7EEB01E95E4D87F /* AuthenticationInterceptor.swift */,
+				CCDA57764A8E03532C6B4955E87CDD8F /* CachedResponseHandler.swift */,
+				42D611F243BC3328826FE250D806EC26 /* Combine.swift */,
+				F55B19C6B7FFB66485714B5DE544E4FC /* Concurrency.swift */,
+				E57628633C1D230EA7BE5C721583E4E7 /* DispatchQueue+Alamofire.swift */,
+				A0FEA7D0ABAF694A3F75736158344A91 /* EventMonitor.swift */,
+				182033E9A6905A038E4EBCEF9C9F45C0 /* HTTPHeaders.swift */,
+				A22772149E6EB9A7609B1C3A69CA7B4F /* HTTPMethod.swift */,
+				19B9DC57828C893A0DBC04D18ECCE398 /* MultipartFormData.swift */,
+				47DFCB8FA58015D2F0126EFB683CD108 /* MultipartUpload.swift */,
+				D0B41CCCDFCF0C04AF8C2DD34A7D594B /* NetworkReachabilityManager.swift */,
+				1774BF767AC3195D750B0871A8FCDFD2 /* Notifications.swift */,
+				9CD27E56025A1A7F604285792B21A6B1 /* OperationQueue+Alamofire.swift */,
+				4A0F9CBC87264EB1B5B841925808649D /* ParameterEncoder.swift */,
+				D0DD249F0D0A2E91B343CC78CFEEDBA5 /* ParameterEncoding.swift */,
+				C317CAA4F2337FF0A55F807FA1B1D2A2 /* Protected.swift */,
+				50AB1C24916D682028695FE189FB604A /* RedirectHandler.swift */,
+				5B49B6E385714464DB6F39C69CDCF3AD /* Request.swift */,
+				5DF0A0974AB3647E46E265B59FAFE7DC /* RequestInterceptor.swift */,
+				6E761F63EACA04B9944E3B8D8CDAF64C /* RequestTaskMap.swift */,
+				8637848096C1E040096D350A02F8E944 /* Response.swift */,
+				2A35AA383B0322648386EF285798BBD0 /* ResponseSerialization.swift */,
+				F3E303F43B8A77B1098439AA7483C11E /* Result+Alamofire.swift */,
+				6D19944393970C1F09CDC2904AD40A95 /* RetryPolicy.swift */,
+				717700B23478BFC9261269EEC9FABE6E /* ServerTrustEvaluation.swift */,
+				3B0D97FB483508422ACE73BA88223F05 /* Session.swift */,
+				DDEF86DB2F034B2435E33314C6B2D948 /* SessionDelegate.swift */,
+				9429E09ACA40025B318451DB5BBD5429 /* StringEncoding+Alamofire.swift */,
+				3423DDAB27DA675FAD3F4CEFD00A0087 /* URLConvertible+URLRequestConvertible.swift */,
+				DE9AD930B7FD9D7787669151B33CC50A /* URLEncodedFormEncoder.swift */,
+				53F89094F10FCB5CD6FAFD56DF1BE1D1 /* URLRequest+Alamofire.swift */,
+				FE13171346B1A07721DCCA31970B8255 /* URLSessionConfiguration+Alamofire.swift */,
+				02F0E367AD0EFC79467D657D126B9FBD /* Validation.swift */,
+				2B0810928A6319057A946D6BCAD4DD5E /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		9E50AEFB683746904DA17F069AC48EC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
 				9C53D761875D66AEC8C637B277736D77 /* Pods-ZemogaTest */,
 				7BE03A65D6B1B657653E25AFC364461D /* Pods-ZemogaTest-ZemogaTestUITests */,
 				8A4C466C02A4ADB878BDE3F3452E7FDB /* Pods-ZemogaTestTests */,
@@ -130,74 +345,41 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		9F4B67447122FC6BA6080EAA9B88A719 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+				8E167B633C802817B2BE74255F6EE178 /* Alamofire */,
 			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		A1BF7DD321AFD89AD39B3720BC79349D /* Pods-ZemogaTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				8C5749C8A261C1771F0C19FF2DD5F83F /* Pods-ZemogaTestTests.modulemap */,
-				12215D18DF6776E9E244E28B02E5D0E6 /* Pods-ZemogaTestTests-acknowledgements.markdown */,
-				E7E09A3E86A6F18A6F80B4CFCFE8B9CF /* Pods-ZemogaTestTests-acknowledgements.plist */,
-				618AEB951120C3C9D13FF406783A2C3D /* Pods-ZemogaTestTests-dummy.m */,
-				6090F2BEB29796BBDF1824B43718298A /* Pods-ZemogaTestTests-Info.plist */,
-				B3D04EB9547518C4BEBF842426D6E392 /* Pods-ZemogaTestTests-umbrella.h */,
-				0B2B724CD9DB63F0F9779BCC9DDDCECA /* Pods-ZemogaTestTests.debug.xcconfig */,
-				1425AEAC93005E2BCF124172D25D98EE /* Pods-ZemogaTestTests.release.xcconfig */,
-			);
-			name = "Pods-ZemogaTestTests";
-			path = "Target Support Files/Pods-ZemogaTestTests";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				49A5C1A7D40D6EFB21D732FABFE65495 /* Products */,
-				E77317FCE05B58A50AD4EAF4AEC2E41F /* Targets Support Files */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				9F4B67447122FC6BA6080EAA9B88A719 /* Pods */,
+				9E50AEFB683746904DA17F069AC48EC9 /* Products */,
+				3D2BC9BBC23AC05AB41FA3DADAE76AA1 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E77317FCE05B58A50AD4EAF4AEC2E41F /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				02A502467CBB8E0DD5045D9360AD2279 /* Pods-ZemogaTest */,
-				196D5AE7075869B98CB21916B304C567 /* Pods-ZemogaTest-ZemogaTestUITests */,
-				A1BF7DD321AFD89AD39B3720BC79349D /* Pods-ZemogaTestTests */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		21F2124CEF59EF18C95B13CC2AED04BD /* Headers */ = {
+		38DFCC496D779D04E43A266217466BE6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9FF9E414A35215D3092B562D5170185 /* Pods-ZemogaTest-ZemogaTestUITests-umbrella.h in Headers */,
+				2057BBE8EF6F24D723EBF277ED5D8A30 /* Pods-ZemogaTest-ZemogaTestUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A36BA2C978ABAB3B36F90F71DCFC7A5 /* Headers */ = {
+		52E6F7B26483BE3BC9393C6C05D32424 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B89554ED88E3EDE136A5739C3B49B778 /* Pods-ZemogaTest-umbrella.h in Headers */,
+				005B319B494ED2DAA239B9939A504DFC /* Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,21 +391,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF560FA44A29935257F01E16D8798539 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576A1F360049C7368840718E2658CD0B /* Pods-ZemogaTest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		45C730BBF22956F6383CE34DDC3FBBA4 /* Pods-ZemogaTest-ZemogaTestUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A145D9F284F997D2994151570D8B632 /* Build configuration list for PBXNativeTarget "Pods-ZemogaTest-ZemogaTestUITests" */;
+			buildConfigurationList = C5603E24D2B82B7A7DEF392C072B64F8 /* Build configuration list for PBXNativeTarget "Pods-ZemogaTest-ZemogaTestUITests" */;
 			buildPhases = (
-				21F2124CEF59EF18C95B13CC2AED04BD /* Headers */,
-				2295E1613C6E555A7A17B4C593409EB4 /* Sources */,
-				4A5D2FD613A9B2B4B59C3DF751AD3E98 /* Frameworks */,
-				2C2C887A02B415695D387EF6DFB27257 /* Resources */,
+				38DFCC496D779D04E43A266217466BE6 /* Headers */,
+				3E58E063BED748A62C9E5D46803EC98A /* Sources */,
+				8C58A2940B7FEA14AED27FC68F2449BE /* Frameworks */,
+				9931231F0062709BD38988063835C0DC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A83F83B9F4648415BFF4A3FA2CD37DBD /* PBXTargetDependency */,
 			);
 			name = "Pods-ZemogaTest-ZemogaTestUITests";
 			productName = Pods_ZemogaTest_ZemogaTestUITests;
@@ -242,7 +433,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				946E1C69ECBFECFF38435E5D539AD97B /* PBXTargetDependency */,
+				AD6A983AA5E1555A0BDE0945494CBFF9 /* PBXTargetDependency */,
 			);
 			name = "Pods-ZemogaTestTests";
 			productName = Pods_ZemogaTestTests;
@@ -251,20 +442,39 @@
 		};
 		75535EDC2F3E82B870702117AD7C7A8B /* Pods-ZemogaTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6737D8F0FE533C6E4AE89D16FB9157C5 /* Build configuration list for PBXNativeTarget "Pods-ZemogaTest" */;
+			buildConfigurationList = 988F106DB7EF0E7526D66D8A36BD250F /* Build configuration list for PBXNativeTarget "Pods-ZemogaTest" */;
 			buildPhases = (
-				2A36BA2C978ABAB3B36F90F71DCFC7A5 /* Headers */,
-				CF27A6211A52909EDE684374E64EB0D8 /* Sources */,
-				D000D3326C41FCDD260F7D9A33E0525B /* Frameworks */,
-				E3080B293FAAF9ADD020B5B71DD92C1F /* Resources */,
+				FF560FA44A29935257F01E16D8798539 /* Headers */,
+				9F3A39130F508D06FA5D39CEE20D15A2 /* Sources */,
+				1A31F67A49819DE9A0671AE40E089C98 /* Frameworks */,
+				31B89D27D20F0716E5E30DEDCB82035E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2525179BF45DF232E2D5EAE7BA95B934 /* PBXTargetDependency */,
+			);
+			name = "Pods-ZemogaTest";
+			productName = Pods_ZemogaTest;
+			productReference = 9C53D761875D66AEC8C637B277736D77 /* Pods-ZemogaTest */;
+			productType = "com.apple.product-type.framework";
+		};
+		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A212264186B8822192F9C369D7DE4BB /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				52E6F7B26483BE3BC9393C6C05D32424 /* Headers */,
+				F5D2A45FBA06D86A537CB441D5BF4FF4 /* Sources */,
+				15DC142A7EE833251AA37FC8E2B8E01F /* Frameworks */,
+				E9D4145FA41F60FFAB33A07796D9ED97 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-ZemogaTest";
-			productName = Pods_ZemogaTest;
-			productReference = 9C53D761875D66AEC8C637B277736D77 /* Pods-ZemogaTest */;
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -285,10 +495,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 49A5C1A7D40D6EFB21D732FABFE65495 /* Products */;
+			productRefGroup = 9E50AEFB683746904DA17F069AC48EC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
 				75535EDC2F3E82B870702117AD7C7A8B /* Pods-ZemogaTest */,
 				45C730BBF22956F6383CE34DDC3FBBA4 /* Pods-ZemogaTest-ZemogaTestUITests */,
 				4D278AE1540A82DD69AFE341B37FED81 /* Pods-ZemogaTestTests */,
@@ -304,14 +515,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C2C887A02B415695D387EF6DFB27257 /* Resources */ = {
+		31B89D27D20F0716E5E30DEDCB82035E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3080B293FAAF9ADD020B5B71DD92C1F /* Resources */ = {
+		9931231F0062709BD38988063835C0DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9D4145FA41F60FFAB33A07796D9ED97 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,37 +547,205 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2295E1613C6E555A7A17B4C593409EB4 /* Sources */ = {
+		3E58E063BED748A62C9E5D46803EC98A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AADD40AACA5C08F0833FA8D9F6AC0496 /* Pods-ZemogaTest-ZemogaTestUITests-dummy.m in Sources */,
+				FB95B55E32109BFFB24CA6134B4F6779 /* Pods-ZemogaTest-ZemogaTestUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF27A6211A52909EDE684374E64EB0D8 /* Sources */ = {
+		9F3A39130F508D06FA5D39CEE20D15A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EC916F1611E18149E09A2F230BACBA7 /* Pods-ZemogaTest-dummy.m in Sources */,
+				D338E1DDFC820164072B5D4A18157F15 /* Pods-ZemogaTest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5D2A45FBA06D86A537CB441D5BF4FF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0EA90FBF83350C49E6EF6C8A98D6F00 /* AFError.swift in Sources */,
+				F17A4CA4664CABB331D39FE902E06843 /* Alamofire.swift in Sources */,
+				55AABB1FB38F61A3369ACC555FF3046D /* Alamofire-dummy.m in Sources */,
+				1EE44196E7BCE57AD96A2C751651EF40 /* AlamofireExtended.swift in Sources */,
+				7483E5327027263F7E4B94A2997191C4 /* AuthenticationInterceptor.swift in Sources */,
+				2CBE3651CA006E19F5D64A2DE9B9A028 /* CachedResponseHandler.swift in Sources */,
+				46A64A43AFA057B6B63C8F0C12F509B4 /* Combine.swift in Sources */,
+				9C9030DEDB0DF955B16FE08C50892D57 /* Concurrency.swift in Sources */,
+				EEC150B66BCCD6C80FDA7E4D1975166B /* DispatchQueue+Alamofire.swift in Sources */,
+				CEBFFEED65D877702B2F36102528CF6D /* EventMonitor.swift in Sources */,
+				7E02F5B62BE00E97847DF549FFED2490 /* HTTPHeaders.swift in Sources */,
+				D6B4751CED01D53E4A1B6A571AAA2F83 /* HTTPMethod.swift in Sources */,
+				7FE695DA8EE7FF1286556E06B692009B /* MultipartFormData.swift in Sources */,
+				E9B4C89E7EB3B27D46AFCA452C3D426F /* MultipartUpload.swift in Sources */,
+				A29100AA1876DDEFF6F54694A51FDB0E /* NetworkReachabilityManager.swift in Sources */,
+				2CCD13099063CD560E3067BD132914FA /* Notifications.swift in Sources */,
+				E54654D504A42C24F284A68F87F7671D /* OperationQueue+Alamofire.swift in Sources */,
+				99D058E53EFEE3AC4857CDE3DBA5C004 /* ParameterEncoder.swift in Sources */,
+				68FB2DCB4C77DBCAF9A6037E470F2BDE /* ParameterEncoding.swift in Sources */,
+				A53BDE589BDD6483F3EEDCE5EA1DCCD3 /* Protected.swift in Sources */,
+				045DE6EBF9B2F63F60F5BE60C1198E06 /* RedirectHandler.swift in Sources */,
+				B3658C29BBDE1033F6269A92E612CB30 /* Request.swift in Sources */,
+				DD902FE8D6824681C929D028655AE121 /* RequestInterceptor.swift in Sources */,
+				DA34899BEF0668D76CBCE8C4CE47B97B /* RequestTaskMap.swift in Sources */,
+				75966A9262648D4647D764E3E76BC6AC /* Response.swift in Sources */,
+				824D816B1EE404F2DD400EE678695CBE /* ResponseSerialization.swift in Sources */,
+				04A896288CE3A59B530250337A5F8362 /* Result+Alamofire.swift in Sources */,
+				33A7D0F2D03004CE256A75E03DF33C70 /* RetryPolicy.swift in Sources */,
+				B704B198B9B520D449260877E300D821 /* ServerTrustEvaluation.swift in Sources */,
+				81B8D2B7CEB25C2448B0BC9B33591A65 /* Session.swift in Sources */,
+				1976BB7D7E26A12E29283E71154B63B3 /* SessionDelegate.swift in Sources */,
+				7F1BB526AAE3ECDCE90127D9D0E10261 /* StringEncoding+Alamofire.swift in Sources */,
+				8D75FC8D7476C9674234F39F1A820D8C /* URLConvertible+URLRequestConvertible.swift in Sources */,
+				7930C94414B4C661867AC4FBE82E996C /* URLEncodedFormEncoder.swift in Sources */,
+				BC0ECA8F22DEDE8886E189CD0EAA1197 /* URLRequest+Alamofire.swift in Sources */,
+				808C960C82D708FC1A42C581D6CB4940 /* URLSessionConfiguration+Alamofire.swift in Sources */,
+				3C4059621E23842C19D4EB5D35B41989 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		946E1C69ECBFECFF38435E5D539AD97B /* PBXTargetDependency */ = {
+		2525179BF45DF232E2D5EAE7BA95B934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = 48CC2BE97FE8F96F9DF6BFDDE0390780 /* PBXContainerItemProxy */;
+		};
+		A83F83B9F4648415BFF4A3FA2CD37DBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = CCFFE0C95BC32A7B1A09BD7D248365C2 /* PBXContainerItemProxy */;
+		};
+		AD6A983AA5E1555A0BDE0945494CBFF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ZemogaTest";
 			target = 75535EDC2F3E82B870702117AD7C7A8B /* Pods-ZemogaTest */;
-			targetProxy = A5382E0F9801B7B8073B3E13290D1218 /* PBXContainerItemProxy */;
+			targetProxy = 604F1136A2DD28DEE2DC6207D27032E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		19A9C87D2454513FCBF70032D061E9A0 /* Debug */ = {
+		18262977BC2BFFE2ADD7D59C1D230C49 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 410100FC93DC2BFF1E9FBED853504D74 /* Pods-ZemogaTest.debug.xcconfig */;
+			baseConfigurationReference = E2EC6687E41CE5AE7B75A470A6010A50 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		20D1A173B4130129492D2136CCFB9542 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A079D6ED48DB3869557120FCF3D62F7 /* Pods-ZemogaTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		25063A036A893E92A2CB105E4F8286F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84E8B10A001940FE91C0CA25F92BA22C /* Pods-ZemogaTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		661CEF51947CC8CF60FF781A654975C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CD6C9B396599AF71208BBAAA1707862 /* Pods-ZemogaTest.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -373,7 +759,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,12 +775,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		4214E6946993DF02ED98D89047C64016 /* Debug */ = {
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -447,7 +834,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -460,11 +847,10 @@
 			};
 			name = Debug;
 		};
-		4EA11473A10A119D353210E316CDB524 /* Debug */ = {
+		90A4588B06F8745E7FCD1B00204D6241 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EFEC85066873D94229EDD3BE64A43D4 /* Pods-ZemogaTest-ZemogaTestUITests.debug.xcconfig */;
+			baseConfigurationReference = DAB3F4DEC660EA4E0D1518B65C6A9A91 /* Alamofire.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -474,60 +860,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		605DBA6BEB598CA700876A48202CDCF4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1425AEAC93005E2BCF124172D25D98EE /* Pods-ZemogaTestTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.5;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -535,45 +883,7 @@
 			};
 			name = Release;
 		};
-		B4C2D2C7CC0BB208371E499B982BF05C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99759CDD76FAF1618995EFF5443428EC /* Pods-ZemogaTest.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CD85FD90473CFBE797E4264E7BBC70AF /* Release */ = {
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -623,7 +933,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -635,9 +945,81 @@
 			};
 			name = Release;
 		};
-		D77FE9C9D573979090ECE54A232C7AF3 /* Release */ = {
+		9E98C04A5FA16D8AD5D48C1861179497 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A54963F2095EADB15F6921A76525495 /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */;
+			baseConfigurationReference = A4953B7FBF888C855983463F65AC3E14 /* Alamofire.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CEF8D25283587AD5E57BBCB3435469F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8377643F4CEADAC51EC1B49D1003779 /* Pods-ZemogaTest.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZemogaTest/Pods-ZemogaTest.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E77A93DFA3471AC016BE4D3B168E41F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 467153C9177F24DB2F470E63C3087832 /* Pods-ZemogaTest-ZemogaTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -651,7 +1033,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ZemogaTest-ZemogaTestUITests/Pods-ZemogaTest-ZemogaTestUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -673,60 +1055,14 @@
 			};
 			name = Release;
 		};
-		FCF4489A8456FF77F3168517042E0ED2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B2B724CD9DB63F0F9779BCC9DDDCECA /* Pods-ZemogaTestTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ZemogaTestTests/Pods-ZemogaTestTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4214E6946993DF02ED98D89047C64016 /* Debug */,
-				CD85FD90473CFBE797E4264E7BBC70AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6737D8F0FE533C6E4AE89D16FB9157C5 /* Build configuration list for PBXNativeTarget "Pods-ZemogaTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				19A9C87D2454513FCBF70032D061E9A0 /* Debug */,
-				B4C2D2C7CC0BB208371E499B982BF05C /* Release */,
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -734,17 +1070,35 @@
 		6A8638C88137F1B7AA14017F2DBACF6D /* Build configuration list for PBXNativeTarget "Pods-ZemogaTestTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCF4489A8456FF77F3168517042E0ED2 /* Debug */,
-				605DBA6BEB598CA700876A48202CDCF4 /* Release */,
+				25063A036A893E92A2CB105E4F8286F3 /* Debug */,
+				20D1A173B4130129492D2136CCFB9542 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A145D9F284F997D2994151570D8B632 /* Build configuration list for PBXNativeTarget "Pods-ZemogaTest-ZemogaTestUITests" */ = {
+		8A212264186B8822192F9C369D7DE4BB /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4EA11473A10A119D353210E316CDB524 /* Debug */,
-				D77FE9C9D573979090ECE54A232C7AF3 /* Release */,
+				9E98C04A5FA16D8AD5D48C1861179497 /* Debug */,
+				90A4588B06F8745E7FCD1B00204D6241 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		988F106DB7EF0E7526D66D8A36BD250F /* Build configuration list for PBXNativeTarget "Pods-ZemogaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF8D25283587AD5E57BBCB3435469F1 /* Debug */,
+				661CEF51947CC8CF60FF781A654975C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5603E24D2B82B7A7DEF392C072B64F8 /* Build configuration list for PBXNativeTarget "Pods-ZemogaTest-ZemogaTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18262977BC2BFFE2ADD7D59C1D230C49 /* Debug */,
+				E77A93DFA3471AC016BE4D3B168E41F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
