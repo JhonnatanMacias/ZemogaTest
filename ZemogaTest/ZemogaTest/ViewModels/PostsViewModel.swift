@@ -45,8 +45,6 @@ class PostsViewModel: PostsViewModelProtocol {
     var postFavoritesModel: Bindable<[Post]> = Bindable([])
     var cellsViewModel: Bindable<[PostCellViewModel]> = Bindable([])
     
-    var postsRealm: [PostRealm]!
-    
     func postSelected(postViewModel: PostDetailViewModel, post: Post) {
         markPostLikeRead(post: post)
         navigateToPostDetail?(postViewModel)
@@ -93,6 +91,7 @@ class PostsViewModel: PostsViewModelProtocol {
     }
     
     func removePost(index: Int,  post: Post) {
+        let postsRealm = DatabaseManager.shared.fetchPosts()
         if let postToDelete = postsRealm.filter({ $0.id == post.id}).first {
             DatabaseManager.shared.deletePost(object: postToDelete)
             self.postModel.value.remove(at: index)
@@ -103,8 +102,12 @@ class PostsViewModel: PostsViewModelProtocol {
     func deleteAllPost() {
         postModel.value.removeAll()
         cellsViewModel.value.removeAll()
-    
+        let postsRealm = DatabaseManager.shared.fetchPosts()
         DatabaseManager.shared.deleteAll(objects: postsRealm)
+    }
+    
+    func getPostFromDB() -> [PostRealm] {
+        return DatabaseManager.shared.fetchPosts()
     }
     
     func viewDidLoad() {
@@ -114,21 +117,19 @@ class PostsViewModel: PostsViewModelProtocol {
         if postAllModel.isEmpty || postAllModel.count < 1 {
             getPosts()
         } else {
-            postsRealm = nil
-            postsRealm = DatabaseManager.shared.fetchPosts()
             populateViewModelFromDB()
         }
     }
     
     func populateViewModelFromDB() {
+        let postsRealm = DatabaseManager.shared.fetchPosts()
         let posts = postsRealm.map { Post(postReal: $0) }
         setupModel(model: posts)
     }
     
     func storagePosts(model: [PostRealm]) {
-        DispatchQueue.main.async { [weak self] in
+        DispatchQueue.main.async { 
             DatabaseManager.shared.add(posts: model)
-            self?.postsRealm = model
         }
     }
     
@@ -138,12 +139,14 @@ class PostsViewModel: PostsViewModelProtocol {
     }
     
     func markPostLikeRead(post: Post) {
+        let postsRealm = DatabaseManager.shared.fetchPosts()
         if let postToUpdate = postsRealm.filter({ $0.id == post.id}).first {
             DatabaseManager.shared.markPostRead(post: postToUpdate)
         }
     }
     
     func markPostLikeFavorite(postDetail: PostDetail) {
+        let postsRealm = DatabaseManager.shared.fetchPosts()
         if let postToUpdate = postsRealm.filter({ $0.id == postDetail.id }).first {
             DatabaseManager.shared.markPostFavorited(post: postToUpdate,
                                                      isFavorited: postDetail.isFavorited)
